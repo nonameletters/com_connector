@@ -16,6 +16,7 @@ namespace db_connector
             CPerson(QString sid         = "", QString groupSid = "", QString firstName = "", \
                     QString midleName   = "", QString lastName = "", QString keyNumber = "", \
                     QString tableNumber = "", QString snils = "");
+            CPerson(const CPerson& person);
             virtual ~CPerson();
 
             void setSid(QString value);
@@ -76,11 +77,11 @@ namespace db_connector
             string getVidDogovoraStd()   const;
             string getVidZanyatostiStd() const;            
 
-            friend ostream & operator << (ostream & out, CPerson& p)
-            {
-                out << " // ---------- ---------- ---------- ---------- ---------- ---------- " << endl;
-                out << " SID      : " << p.getSidStd() << endl;
-                out << " NAME     : " << p.getFullName().toStdString() << endl;
+            friend ostream & operator << (ostream & out, CPerson& p);
+//            {
+//                out << " // ---------- ---------- ---------- ---------- ---------- ---------- " << endl;
+//                out << " SID      : " << p.getSidStd() << endl;
+//                out << " NAME     : " << p.getFullName().toStdString() << endl;
 
 //                auto it = begin(l_list);
 //                for(; it != end(l_list); it++)
@@ -89,8 +90,8 @@ namespace db_connector
 //                }
 
                 // out << p.getSidStd() << " " << p.getGroupSidStd() << " " << p.getFirstNameStd() << " " << p.getMidleNameStd() << " " << p.getLastNameStd() << " " << p.getKeyNumberStd() << " " << p.getTableNumberStd() << " " << p.getSnilsStd();
-                return out;
-            }
+//                return out;
+//            }
 
         private:
             QString m_sid;

@@ -4,7 +4,7 @@
 #
 #-------------------------------------------------
 
-QT       += core gui axcontainer sql
+QT       += core gui axcontainer sql xml
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -26,7 +26,8 @@ SOURCES += main.cpp\
     ccon_anviz.cpp \
     logger.cpp \
     functions.cpp \
-    ccon_tc.cpp
+    ccon_tc.cpp \
+    ccon_file.cpp
 
 HEADERS  += mainwindow.h \
     employee.h \
@@ -40,7 +41,8 @@ HEADERS  += mainwindow.h \
     logger.h \
     constansts.h \
     functions.h \
-    ccon_tc.h
+    ccon_tc.h \
+    ccon_file.h
 
 FORMS    += mainwindow.ui
 

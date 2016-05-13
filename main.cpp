@@ -22,6 +22,7 @@
 #include "dbconnector.h"
 #include "person.h"
 #include "constansts.h"
+#include "ccon_file.h"
 
 #include "logger.h"
 #include "functions.h"
@@ -173,10 +174,15 @@ int main(int argc, char *argv[])
         {
             cout << "Remove person." << endl;
         }
-        else if (l_firstParam == 4)
+        else if (l_firstParam == 5)
         {
             cout << "Sync card numbers Legos VS Anviz" << endl;
             syncCardNumLegosVSAnviz();
+        }
+        else if (l_firstParam == 4)
+        {
+            CConFile l_source;
+            l_source.getPersonList();
         }
         else
         {
@@ -184,6 +190,7 @@ int main(int argc, char *argv[])
             cout << "1 - start full syncronization." << endl;
             cout << "2 - add person." << endl;
             cout << "3 - remove person." << endl;
+            cout << "4 - add person from XML file in ./users dir";
         }
     }
     else
@@ -193,6 +200,7 @@ int main(int argc, char *argv[])
         cout << "1 - start full syncronization." << endl;
         cout << "2 - add person." << endl;
         cout << "3 - remove person." << endl;
+        cout << "4 - add person from XML file in ./users dir";
         cout << "// ---------- ---------- ---------- ---------- ---------- ----------" << endl;
         cout << "// command line" << endl;
         cout << "Prog_name operation_type 1 2 3 4 5 6 7" << endl;

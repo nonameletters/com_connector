@@ -3,6 +3,15 @@
 namespace db_connector
 {
     // ---------- ---------- ---------- ---------- ---------- ----------
+    ostream & operator << (ostream & out, CPerson& p)
+    {
+        out << " // ---------- ---------- ---------- ---------- ---------- ---------- " << endl;
+        out << " SID      : " << p.getSidStd() << endl;
+        out << " NAME     : " << p.getFullName().toStdString() << endl;
+        return out;
+    }
+
+    // ---------- ---------- ---------- ---------- ---------- ----------
     CPerson::CPerson(QString sid,       QString groupSid, QString firstName, \
                      QString midleName, QString lastName, QString keyNumber, \
                      QString tableNumber, QString snils) :
@@ -10,6 +19,33 @@ namespace db_connector
                      m_midleName(midleName), m_lastName(lastName), m_keyNumber(keyNumber), \
                      m_tableNumber(tableNumber), m_snils(snils)
     {
+    }
+
+    // ---------- ---------- ---------- ---------- ---------- ----------
+    CPerson::CPerson(const CPerson& person)
+    {
+        m_sid            = person.getSid();
+        m_groupSid       = person.getGroupSid();
+        m_firstName      = person.getFirstName();
+        m_midleName      = person.getMidleName();
+        m_lastName       = person.getLastName();
+        m_keyNumber      = person.getKeyNumber();
+        m_tableNumber    = person.getTableNumber();
+        m_snils          = person.getSnils();
+        m_position       = person.getPositionStd();
+        m_inn            = person.getInnStd();
+        m_failed         = person.getFailedStd();
+        m_activity       = person.getActivity();
+        m_organisation   = person.getOrganisationStd();
+        m_laborContract  = person.getLaborContractStd();
+        m_recordId       = person.getRecordIdStd();
+        m_birthDay       = person.getBirthDay();
+        m_hireDate       = person.getHireDate();
+        m_dismissionDate = person.getDismissionDate();
+        m_dogovor        = person.getVidDogovora();
+        m_zanyatost      = person.getVidZanyatosti();
+        m_comment        = person.getComment();
+        m_photo          = person.getPhoto();
     }
 
     // ---------- ---------- ---------- ---------- ---------- ----------

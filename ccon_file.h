@@ -8,6 +8,7 @@
 #include <QXmlSimpleReader>
 #include <QXmlInputSource>
 #include <QXmlDefaultHandler>
+#include <QDate>
 #include <memory>
 
 #include <iostream>
@@ -54,7 +55,17 @@ class CSXmlHandler : public QXmlDefaultHandler
 
         CPerson getPerson() const;
 
+        template<typename T>
+        void gag(T param)
+        {
+            if (param == param)
+            {
+                return;
+            }
+        }
+
     private:
         CPerson m_person;
+        QString m_curNode = "";
 };
 #endif // CCON_FILE_H
