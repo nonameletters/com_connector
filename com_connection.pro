@@ -27,7 +27,10 @@ SOURCES += main.cpp\
     logger.cpp \
     functions.cpp \
     ccon_tc.cpp \
-    ccon_file.cpp
+    ccon_file.cpp \
+    dolgnost.cpp \
+    profile.cpp \
+    door.cpp
 
 HEADERS  += mainwindow.h \
     employee.h \
@@ -42,7 +45,10 @@ HEADERS  += mainwindow.h \
     constansts.h \
     functions.h \
     ccon_tc.h \
-    ccon_file.h
+    ccon_file.h \
+    dolgnost.h \
+    profile.h \
+    door.h
 
 FORMS    += mainwindow.ui
 

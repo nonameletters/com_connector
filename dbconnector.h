@@ -19,6 +19,9 @@
 
 #include <exception>
 
+#include "dolgnost.h"
+#include "profile.h"
+#include "door.h"
 #include "person.h"
 // #include "event.h"
 
@@ -60,12 +63,24 @@ namespace db_connector
             virtual void addPerson(const CPerson* person, const QString& deptNum);
             virtual void addPersonList(const vector<CPerson*> list);
             virtual vector<CPerson*> getPersonListByPerson(const CPerson* person);
+            virtual vector<CPerson*> getPersonListByTabNumber(const QString& tabNum);
             virtual void updateBirthDay(const QString& id, const QDate& date);
             virtual void updateSnils(const QString& id, const QString& snils);
             virtual void updateTableNumber(const QString& id, const QString& tabNum);
             virtual void updateDepartmentNumber(const QString& id, const QString& departId);
             virtual void updateKeyAndCommentByTableNumber(const QString& tabNum, const QString& key, const QString& comment);
-
+            virtual void updateNameParams(const QString& id, const CPerson* person);
+            virtual void updatePersonPosition(const QString& id, const CPerson* person);
+            virtual CDolgnost getDolgnostById(const QString& id);
+            virtual CDolgnost getDolgnostByCode(const QString& code);
+            virtual CDolgnost createNewPosition(const CDolgnost& value);
+            virtual CProfile getProfileByCode(const QString& code);
+            virtual vector<CDoor> getDoorsForProfile(const QString& id);
+            virtual CProfile getProfileById(const QString& id);
+            virtual vector<CDoor> getAllDoors();
+            virtual CProfile createNewProfileByPerson(const CPerson* person);
+            virtual vector<CDoor> createNewProfileDoors(const QString& pfId);
+            virtual void updatePersonProfile(const CPerson* person);
         protected:
             CDbConnector();
 

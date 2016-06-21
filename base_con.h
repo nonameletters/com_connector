@@ -23,7 +23,7 @@ namespace db_connector
             static QStringList getDrivers();
             void setDatabaseName(QString dbName);
             QString getConResult() const;
-            QSqlDatabase& getDatabase();
+            QSqlDatabase getDatabase();
             void setHostName(QString host);
             void setDriverName(QString driver);
             void setUsername(QString user);
@@ -37,6 +37,7 @@ namespace db_connector
             bool    execQuery();
             bool    execUpdateEvents(QString query);
 
+
         private:
             QString m_uName;
             QString m_uPass;
@@ -46,7 +47,7 @@ namespace db_connector
             QString m_host;
 
             QString       m_conResult = "Connection was not set.";
-            QSqlDatabase  m_db;
+            // QSqlDatabase  m_db;
     };
 }
 #endif // BASE_CON_H

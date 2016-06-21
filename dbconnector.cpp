@@ -42,6 +42,13 @@ namespace db_connector
     }
 
     // ---------- ---------- ---------- ---------- ---------- ----------
+    vector<CPerson*> CDbConnector::getPersonListByTabNumber(const QString& tabNum)
+    {
+        throwIfNull(pm_connector, "In \"getPersonListByTabNumber()\" null member");
+        return pm_connector->getPersonListByTabNumber(tabNum);
+    }
+
+    // ---------- ---------- ---------- ---------- ---------- ----------
     QString CDbConnector::getCreateStatus() const
     {
         throwIfNull(pm_connector, "In \"getCreateStatus()\" null member");
@@ -102,6 +109,90 @@ namespace db_connector
     {
         throwIfNull(pm_connector, "In \"updateKeyAndCommentByTableNumber()\" null member");
         pm_connector->updateKeyAndCommentByTableNumber(tabNum, key, comment);
+    }
+
+    // ---------- ---------- ---------- ---------- ---------- ----------
+    void CDbConnector::updateNameParams(const QString& id, const CPerson* person)
+    {
+        throwIfNull(pm_connector, "In \"updateNameParams()\" null member");
+        pm_connector->updateNameParams(id, person);
+    }
+
+    // ---------- ---------- ---------- ---------- ---------- ----------
+    void CDbConnector::updatePersonPosition(const QString& id, const CPerson* person)
+    {
+        throwIfNull(pm_connector, "In \"updatePersonPosition()\" null member");
+        pm_connector->updatePersonPosition(id, person);
+    }
+
+    // ---------- ---------- ---------- ---------- ---------- ----------
+    CDolgnost CDbConnector::getDolgnostById(const QString& id)
+    {
+        throwIfNull(pm_connector, "In \"getDolgnostById()\" null member");
+        return pm_connector->getDolgnostById(id);
+    }
+
+    // ---------- ---------- ---------- ---------- ---------- ----------
+    CDolgnost CDbConnector::getDolgnostByCode(const QString& code)
+    {
+        throwIfNull(pm_connector, "In \"getDolgnostByCode()\" null member");
+        return pm_connector->getDolgnostByCode(code);
+    }
+
+    // ---------- ---------- ---------- ---------- ---------- ----------
+    CDolgnost CDbConnector::createNewPosition(const CDolgnost& value)
+    {
+        throwIfNull(pm_connector, "In \"createNewPosition()\" null member");
+        return pm_connector->createNewPosition(value);
+    }
+
+    // ---------- ---------- ---------- ---------- ---------- ----------
+    CProfile CDbConnector::getProfileByCode(const QString& code)
+    {
+        throwIfNull(pm_connector, "In \"getProfileByCode()\" null member");
+        return pm_connector->getProfileByCode(code);
+    }
+
+    // ---------- ---------- ---------- ---------- ---------- ----------
+    vector<CDoor> CDbConnector::getDoorsForProfile(const QString& id)
+    {
+        throwIfNull(pm_connector, "In \"getDoorsForProfile()\" null member");
+        return pm_connector->getDoorsForProfile(id);
+    }
+
+    // ---------- ---------- ---------- ---------- ---------- ----------
+    CProfile CDbConnector::getProfileById(const QString& id)
+    {
+        throwIfNull(pm_connector, "In \"getProfileById()\" null member");
+        return pm_connector->getProfileById(id);
+    }
+
+    // ---------- ---------- ---------- ---------- ---------- ----------
+    vector<CDoor> CDbConnector::getAllDoors()
+    {
+        throwIfNull(pm_connector, "In \"getAllDoors()\" null member");
+        return pm_connector->getAllDoors();
+    }
+
+    // ---------- ---------- ---------- ---------- ---------- ----------
+    CProfile CDbConnector::createNewProfileByPerson(const CPerson* person)
+    {
+        throwIfNull(pm_connector, "In \"createNewProfileByPerson()\" null member");
+        return pm_connector->createNewProfileByPerson(person);
+    }
+
+    // ---------- ---------- ---------- ---------- ---------- ----------
+    vector<CDoor> CDbConnector::createNewProfileDoors(const QString& pfId)
+    {
+        throwIfNull(pm_connector, "In \"createNewProfileDoors()\" null member");
+        return pm_connector->createNewProfileDoors(pfId);
+    }
+
+    // ---------- ---------- ---------- ---------- ---------- ----------
+    void CDbConnector::updatePersonProfile(const CPerson* person)
+    {
+        throwIfNull(pm_connector, "In \"updatePersonProfile()\" null member");
+        return pm_connector->updatePersonProfile(person);
     }
 
     // ---------- ---------- ---------- ---------- ---------- ----------

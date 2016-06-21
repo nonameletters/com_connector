@@ -44,8 +44,9 @@ namespace nsComConnector
     // ---------- ---------- ---------- ---------- ---------- ----------
     vector<CPerson*> CComConnector::getEmployeis(const QString& tabNumberPrefix)
     {
-        QString l_mes = "START getEmployeis: " + QDateTime::currentDateTime().toString("dd-MM-yyyy hh:mm:ss");
-        CLogger::getInstance()->log(l_mes.toStdString().c_str());
+        QString l_mes = "START getEmployeis FROM 1C: " + QDateTime::currentDateTime().toString("dd-MM-yyyy hh:mm:ss");
+
+        LL << l_mes;
 
         vector<CPerson*> employeis;
 
@@ -71,9 +72,42 @@ namespace nsComConnector
         IDispatch* l_dolg = NULL;
         while (nextRes != false)
         {
+//            if (count >= 20)
+//            {
+//                break;
+//            }
+
             cout << "Loading employees: " << count << endl;
-            CPerson* newEmployee = new CPerson();
+
             // execInvoke(L"Наименование", L"", DISPATCH_PROPERTYGET, 0, nextObject, &m_resInvoke);
+
+            LL << QString::number(count);
+
+            execInvoke(L"Актуальность", L"", DISPATCH_PROPERTYGET, 0, nextObject, &m_resInvoke);
+            bool activity = m_resInvoke.boolVal;
+            if (activity == false)
+            {
+                OLL << "\tNot active person.";
+                execInvoke(L"Next", L"", DISPATCH_METHOD, 0, nextObject, &m_resInvoke);
+                nextRes = m_resInvoke.boolVal;
+                count++;
+                continue;
+            }
+
+            execInvoke(L"ПометкаУдаления", L"", DISPATCH_PROPERTYGET, 0, nextObject, &m_resInvoke);
+            bool deleted = m_resInvoke.boolVal;
+            if (deleted)
+            {
+                OLL << "\tDeleted person.";
+                execInvoke(L"Next", L"", DISPATCH_METHOD, 0, nextObject, &m_resInvoke);
+                nextRes = m_resInvoke.boolVal;
+                count++;
+                continue;
+            }
+
+            CPerson* newEmployee = new CPerson();
+
+            newEmployee->setActivity(activity);
 
             IDispatch* l_fizLico = NULL;
             execInvoke(L"Физлицо", L"", DISPATCH_PROPERTYGET, 0, nextObject, &m_resInvoke);
@@ -111,14 +145,14 @@ namespace nsComConnector
                 if (l_mes.trimmed().isEmpty() == true)
                 {
                     l_fizLico->Release();
-                    CLogger::getInstance()->log("EMPTY NAME.");
+                    OLL << "EMPTY NAME.";
                     execInvoke(L"Next", L"", DISPATCH_METHOD, 0, nextObject, &m_resInvoke);
                     nextRes = m_resInvoke.boolVal;
                     count++;
                     delete newEmployee;
                     continue;
                 }
-                CLogger::getInstance()->log(toWinStr(l_mes).c_str());
+                // CLogger::getInstance()->log(toWinStr(l_mes).c_str());
 
                 newEmployee->setFirstName(l_fName);
                 newEmployee->setMidleName(l_mName);
@@ -141,18 +175,18 @@ namespace nsComConnector
                 l_fizLico->Release();
             }
 
-            execInvoke(L"Актуальность", L"", DISPATCH_PROPERTYGET, 0, nextObject, &m_resInvoke);
-            bool activity = m_resInvoke.boolVal;
-            if (activity == false)
-            {
-                CLogger::getInstance()->log("\tNot Active.");
-                execInvoke(L"Next", L"", DISPATCH_METHOD, 0, nextObject, &m_resInvoke);
-                nextRes = m_resInvoke.boolVal;
-                count++;
-                continue;
-            }
+//            execInvoke(L"Актуальность", L"", DISPATCH_PROPERTYGET, 0, nextObject, &m_resInvoke);
+//            bool activity = m_resInvoke.boolVal;
+//            if (activity == false)
+//            {
+//                CLogger::getInstance()->log("\tNot Active.");
+//                execInvoke(L"Next", L"", DISPATCH_METHOD, 0, nextObject, &m_resInvoke);
+//                nextRes = m_resInvoke.boolVal;
+//                count++;
+//                continue;
+//            }
 
-            newEmployee->setActivity(activity);
+//            newEmployee->setActivity(activity);
 
             execInvoke(L"Код", L"", DISPATCH_PROPERTYGET, 0, nextObject, &m_resInvoke);
             newEmployee->setTableNumber(convertTableNumber(tabNumberPrefix, toWinStr(m_resInvoke.bstrVal)));
@@ -163,12 +197,16 @@ namespace nsComConnector
             execInvoke(L"ДатаУвольнения", L"", DISPATCH_PROPERTYGET, 0, nextObject, &m_resInvoke);
             newEmployee->setDismissionDate(oleDateToQDate(m_resInvoke.date));
 
-            execInvoke(L"Должность", L"", DISPATCH_PROPERTYGET, 0, nextObject, &m_resInvoke);
+            execInvoke(L"ТекущаяДолжностьОрганизации", L"", DISPATCH_PROPERTYGET, 0, nextObject, &m_resInvoke);
             l_dolg = m_resInvoke.pdispVal;
             if (l_dolg != NULL)
             {
+                execInvoke(L"Код", L"", DISPATCH_PROPERTYGET, 0, l_dolg, &m_resInvoke);
+                newEmployee->setPosNumber(tabNumberPrefix + QString::fromWCharArray(m_resInvoke.bstrVal));
+
                 execInvoke(L"Наименование", L"", DISPATCH_PROPERTYGET, 0, l_dolg, &m_resInvoke);
-                newEmployee->setPosition(toWinStr(m_resInvoke.bstrVal).c_str());
+                // newEmployee->setPosition(toWinStr(m_resInvoke.bstrVal).c_str());
+                newEmployee->setPositionName(QString::fromWCharArray(m_resInvoke.bstrVal));
 
                 l_dolg->Release();
             }
@@ -187,8 +225,9 @@ namespace nsComConnector
             IDispatch* l_curVid = m_resInvoke.pdispVal;
 
             execInvokeRefParam(L"XMLString", l_curVid, DISPATCH_METHOD, 1, connection, &m_resInvoke);
-            newEmployee->setVidZanyatosti(toWinStr(m_resInvoke.bstrVal).c_str());
-            CLogger::getInstance()->log(toWinStr(m_resInvoke.bstrVal).c_str());
+            // newEmployee->setVidZanyatosti(toWinStr(m_resInvoke.bstrVal).c_str());
+            newEmployee->setVidZanyatosti(QString::fromWCharArray(m_resInvoke.bstrVal));
+            // CLogger::getInstance()->log(toWinStr(m_resInvoke.bstrVal).c_str());
             if (l_curVid != NULL)
             {
                 l_curVid->Release();
@@ -199,8 +238,10 @@ namespace nsComConnector
             l_curVid = m_resInvoke.pdispVal;
 
             execInvokeRefParam(L"XMLString", l_curVid, DISPATCH_METHOD, 1, connection, &m_resInvoke);
-            newEmployee->setVidDogovora(toWinStr(m_resInvoke.bstrVal).c_str());
-            CLogger::getInstance()->log(toWinStr(m_resInvoke.bstrVal).c_str());
+//            newEmployee->setVidDogovora(toWinStr(m_resInvoke.bstrVal).c_str());
+            newEmployee->setVidDogovora(QString::fromWCharArray(m_resInvoke.bstrVal));
+            // CLogger::getInstance()->log(toWinStr(m_resInvoke.bstrVal).c_str());
+
             if (l_curVid != NULL)
             {
                 l_curVid->Release();
@@ -208,13 +249,15 @@ namespace nsComConnector
 
             execInvoke(L"Next", L"", DISPATCH_METHOD, 0, nextObject, &m_resInvoke);
 
+
+            LL << *newEmployee;
             count++;
             employeis.push_back(newEmployee);
             nextRes = m_resInvoke.boolVal;
         }
 
         l_mes = "END getEmployeis: " + QDateTime::currentDateTime().toString("dd-MM-yyyy hh:mm:ss");
-        CLogger::getInstance()->log(l_mes.toStdString().c_str());
+        LL << l_mes;
         // cout << "END: getEmploies" << endl;
         return employeis;
     }

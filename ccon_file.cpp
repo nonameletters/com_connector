@@ -27,6 +27,7 @@ CConFile::CConFile()
 // ---------- ---------- ---------- ---------- ---------- ----------
 vector<CPerson*> CConFile::getPersonList(Filter flag) const
 {
+    QTextCodec* l_c = QTextCodec::codecForName("CP866");
     vector<CPerson*> l_list;
 
     QXmlSimpleReader l_reader;
@@ -44,21 +45,15 @@ vector<CPerson*> CConFile::getPersonList(Filter flag) const
         if (l_reader.parse(l_source))
         {
             cout << "// Parse OK ---------- ---------- ---------- ---------- ---------- ----------" << endl;
-            l_list.push_back(new CPerson(l_handler.getPerson()));
+            cout << "File name: " << l_c->fromUnicode((*it)).data() << endl;
+            if (flag == ALL)
+            {
+                CPerson* l_p = new CPerson(l_handler.getPerson());
+                l_p->setFullFileName(*it);
+                l_list.push_back(l_p);
+            }
         }
 
-    }
-
-    auto it1 = begin(l_list);
-    for(;it1 != end(l_list); it1++)
-    {
-        cout << (*(*it1));
-    }
-
-    cout << "Persons was readerd: " << l_list.size() << endl;
-    if (flag == ALL)
-    {
-        return l_list;
     }
 
     return l_list;
@@ -176,9 +171,15 @@ bool CSXmlHandler::characters(const QString &str)
         //cout << "Chunk value: " << l_c->fromUnicode(str).data() << endl;
         return true;
     }
+    else if (m_curNode == "kod")
+    {
+        m_person.setPosNumber(str);
+        //cout << "Chunk value: " << l_c->fromUnicode(str).data() << endl;
+        return true;
+    }
     else if (m_curNode == "dolgnost")
     {
-        m_person.setPosition(str.toStdString());
+        m_person.setPositionName(str);
         //cout << "Chunk value: " << l_c->fromUnicode(str).data() << endl;
         return true;
     }

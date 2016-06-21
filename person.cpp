@@ -12,6 +12,29 @@ namespace db_connector
     }
 
     // ---------- ---------- ---------- ---------- ---------- ----------
+    CLogger* operator<<(CLogger* l, const CPerson& p)
+    {
+        QTextCodec* c = QTextCodec::codecForName("CP1251");
+        l->log("PERSON INFO");
+        l->log("\t   FNAME: " + c->fromUnicode(p.getFirstName()));
+        l->log("\t   SNAME: " + c->fromUnicode(p.getMidleName()));
+        l->log("\t   LNAME: " + c->fromUnicode(p.getLastName()));
+        l->log("\t FL_NAME: " + c->fromUnicode(p.getFullName()));
+        l->log("\t   T_NUM: " + c->fromUnicode(p.getTableNumber()));
+        l->log("\t     SID: " + p.getSid());
+        l->log("\t   G_SID: " + p.getGroupSid());
+        l->log("\t     INN: " + p.getInnStd());
+        l->log("\t   SNILS: " + p.getSnils());
+        l->log("\t   B_DAY: " + p.getBirthDay().toString("dd-MM-yyyy"));
+        l->log("\t     DOG: " + c->fromUnicode(p.getVidDogovora()));
+        l->log("\t     ZAN: " + c->fromUnicode(p.getVidZanyatosti()));
+        l->log("\tR_ID_POS: " + c->fromUnicode(p.getPosRecId()));
+        l->log("\t   K_POS: " + c->fromUnicode(p.getPosNumber()));
+        l->log("\t     POS: " + c->fromUnicode(QString(p.getPositionStd().c_str())));
+        return l;
+    }
+
+    // ---------- ---------- ---------- ---------- ---------- ----------
     CPerson::CPerson(QString sid,       QString groupSid, QString firstName, \
                      QString midleName, QString lastName, QString keyNumber, \
                      QString tableNumber, QString snils) :
@@ -32,7 +55,7 @@ namespace db_connector
         m_keyNumber      = person.getKeyNumber();
         m_tableNumber    = person.getTableNumber();
         m_snils          = person.getSnils();
-        m_position       = person.getPositionStd();
+        m_dolgnost       = person.getPosition();
         m_inn            = person.getInnStd();
         m_failed         = person.getFailedStd();
         m_activity       = person.getActivity();
@@ -46,6 +69,7 @@ namespace db_connector
         m_zanyatost      = person.getVidZanyatosti();
         m_comment        = person.getComment();
         m_photo          = person.getPhoto();
+        m_fullFileName   = person.getFullFileName();
     }
 
     // ---------- ---------- ---------- ---------- ---------- ----------
@@ -103,9 +127,27 @@ namespace db_connector
     }
 
     // ---------- ---------- ---------- ---------- ---------- ----------
-    void CPerson::setPosition(string position)
+    void CPerson::setPosRecId(const QString& value)
     {
-        m_position = position;
+        m_dolgnost.setRecId(value);
+    }
+
+    // ---------- ---------- ---------- ---------- ---------- ----------
+    void CPerson::setPosNumber(const QString& value)
+    {
+        m_dolgnost.setId(value);
+    }
+
+    // ---------- ---------- ---------- ---------- ---------- ----------
+    void CPerson::setPositionName(const QString& value)
+    {
+        m_dolgnost.setName(value);
+    }
+
+    // ---------- ---------- ---------- ---------- ---------- ----------
+    void CPerson::setPosition(const CDolgnost& value)
+    {
+        m_dolgnost = value;
     }
 
     // ---------- ---------- ---------- ---------- ---------- ----------
@@ -187,6 +229,18 @@ namespace db_connector
     }
 
     // ---------- ---------- ---------- ---------- ---------- ----------
+    void CPerson::setFullFileName(const QString& fileName)
+    {
+        m_fullFileName = fileName;
+    }
+
+    // ---------- ---------- ---------- ---------- ---------- ----------
+    void CPerson::setProfile(const CProfile& value)
+    {
+        m_profile = value;
+    }
+
+    // ---------- ---------- ---------- ---------- ---------- ----------
     QString CPerson::getSid() const
     {
         return m_sid;
@@ -224,6 +278,13 @@ namespace db_connector
                            getLastName().trimmed());
         return l_fullName.trimmed();
     }
+
+    // ---------- ---------- ---------- ---------- ---------- ----------
+    CProfile CPerson::getProfile()        const
+    {
+        return m_profile;
+    }
+
     // ---------- ---------- ---------- ---------- ---------- ----------
     QString CPerson::getKeyNumber() const
     {
@@ -240,6 +301,30 @@ namespace db_connector
     QString CPerson::getSnils() const
     {
         return m_snils;
+    }
+
+    // ---------- ---------- ---------- ---------- ---------- ----------
+    QString CPerson::getPosRecId()        const
+    {
+        return m_dolgnost.getRecId();
+    }
+
+    // ---------- ---------- ---------- ---------- ---------- ----------
+    QString CPerson::getPosNumber()       const
+    {
+        return m_dolgnost.getId();
+    }
+
+    // ---------- ---------- ---------- ---------- ---------- ----------
+    QString CPerson::getPosName()       const
+    {
+        return m_dolgnost.getName();
+    }
+
+    // ---------- ---------- ---------- ---------- ---------- ----------
+    CDolgnost CPerson::getPosition()      const
+    {
+        return m_dolgnost;
     }
 
     // ---------- ---------- ---------- ---------- ---------- ----------
@@ -282,6 +367,12 @@ namespace db_connector
     QByteArray CPerson::getPhoto()      const
     {
         return m_photo;
+    }
+
+    // ---------- ---------- ---------- ---------- ---------- ----------
+    QString CPerson::getFullFileName()    const
+    {
+        return m_fullFileName.trimmed();
     }
 
     // ---------- ---------- ---------- ---------- ---------- ----------
@@ -333,9 +424,14 @@ namespace db_connector
     }
 
     // ---------- ---------- ---------- ---------- ---------- ----------
+    string CPerson::getPosNumberStd()     const
+    {
+        return getPosNumber().toStdString();
+    }
+    // ---------- ---------- ---------- ---------- ---------- ----------
     string CPerson::getPositionStd() const
     {
-        return m_position;
+        return m_dolgnost.getName().toStdString();
     }
 
     // ---------- ---------- ---------- ---------- ---------- ----------
@@ -386,3 +482,4 @@ namespace db_connector
         return m_zanyatost.toStdString();
     }
 }
+

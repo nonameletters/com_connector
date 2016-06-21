@@ -7,6 +7,7 @@
 #include <QString>
 #include <QSqlDatabase>
 #include <QVariant>
+#include <memory>
 
 #include "dbconnector.h"
 #include "base_con.h"
@@ -33,6 +34,18 @@ namespace db_connector
             virtual void updateTableNumber(const QString& id, const QString& tabNum);
             virtual void updateDepartmentNumber(const QString& id, const QString& departId);
             virtual void updateKeyAndCommentByTableNumber(const QString& tabNum, const QString& key, const QString& comment);
+            virtual void updateNameParams(const QString& id, const CPerson* person);
+            virtual void updatePersonPosition(const QString& id, const CPerson* person);
+            virtual CDolgnost getDolgnostById(const QString& id);
+            virtual CDolgnost getDolgnostByCode(const QString& code);
+            virtual CDolgnost createNewPosition(const CDolgnost& value);
+            virtual CProfile getProfileByCode(const QString& code);
+            virtual vector<CDoor> getDoorsForProfile(const QString& id);
+            virtual CProfile getProfileById(const QString& id);
+            virtual vector<CDoor> getAllDoors();
+            virtual CProfile createNewProfileByPerson(const CPerson* person);
+            virtual vector<CDoor> createNewProfileDoors(const QString& pfId);
+            virtual void updatePersonProfile(const CPerson* person);
 
             QString getNextId(const QString& table, const QString& column);
 

@@ -6,7 +6,14 @@
 #include <iostream>
 #include <QByteArray>
 
+#include <QTextCodec>
+
+#include "dolgnost.h"
+#include "profile.h"
+#include "logger.h"
+
 using namespace std;
+using namespace ns_logger;
 
 namespace db_connector
 {
@@ -27,7 +34,10 @@ namespace db_connector
             void setKeyNumber(QString value);
             void setTableNumber(QString value);
             void setSnils(QString value);
-            void setPosition(string position);
+            void setPosRecId(const QString& value);
+            void setPosNumber(const QString& value);
+            void setPositionName(const QString& value);
+            void setPosition(const CDolgnost& value);
             void setInn(string inn);
             void setFailed(bool failed);
             void setActivity(bool activity);
@@ -41,6 +51,8 @@ namespace db_connector
             void setVidZanyatosti(QString zanyatost);
             void setComment(const QString& comment);
             void setPhoto(const QByteArray& photo);
+            void setFullFileName(const QString& fileName);
+            void setProfile(const CProfile& value);
 
             QString getSid()             const;
             QString getGroupSid()        const;
@@ -49,8 +61,12 @@ namespace db_connector
             QString getLastName()        const;
             QString getFullName()        const;
             QString getKeyNumber()       const;
-            QString getTableNumber()     const;
+            QString getTableNumber()     const;            
             QString getSnils()           const;
+            QString   getPosRecId()      const;
+            QString   getPosNumber()     const;
+            QString   getPosName()       const;
+            CDolgnost getPosition()      const;
             QDate   getBirthDay()        const;
             QDate   getHireDate()        const;
             QDate   getDismissionDate () const;
@@ -58,6 +74,8 @@ namespace db_connector
             QString getVidZanyatosti()   const;
             QString getComment()         const;
             QByteArray   getPhoto()      const;
+            QString getFullFileName()    const;
+            CProfile getProfile()        const;
 
             string getSidStd()           const;
             string getGroupSidStd()      const;
@@ -67,6 +85,7 @@ namespace db_connector
             string getKeyNumberStd()     const;
             string getTableNumberStd()   const;
             string getSnilsStd()         const;
+            string getPosNumberStd()     const;
             string getPositionStd()      const;
             string getInnStd()           const;
             bool   getFailedStd()        const;
@@ -77,21 +96,8 @@ namespace db_connector
             string getVidDogovoraStd()   const;
             string getVidZanyatostiStd() const;            
 
-            friend ostream & operator << (ostream & out, CPerson& p);
-//            {
-//                out << " // ---------- ---------- ---------- ---------- ---------- ---------- " << endl;
-//                out << " SID      : " << p.getSidStd() << endl;
-//                out << " NAME     : " << p.getFullName().toStdString() << endl;
-
-//                auto it = begin(l_list);
-//                for(; it != end(l_list); it++)
-//                {
-//                    out << (*(*it));
-//                }
-
-                // out << p.getSidStd() << " " << p.getGroupSidStd() << " " << p.getFirstNameStd() << " " << p.getMidleNameStd() << " " << p.getLastNameStd() << " " << p.getKeyNumberStd() << " " << p.getTableNumberStd() << " " << p.getSnilsStd();
-//                return out;
-//            }
+            friend ostream & operator<<(ostream & out, CPerson& p);
+            friend CLogger*  operator<<(CLogger* l, const CPerson& p);
 
         private:
             QString m_sid;
@@ -102,7 +108,9 @@ namespace db_connector
             QString m_keyNumber;
             QString m_tableNumber;
             QString m_snils;
-            string  m_position;
+//            QString m_posRecId;
+//            QString m_posNumber;
+//            string  m_position;
             string  m_inn;
             bool    m_failed;
             bool    m_activity;
@@ -116,6 +124,9 @@ namespace db_connector
             QString m_zanyatost;
             QString m_comment;
             QByteArray m_photo;
+            QString m_fullFileName;
+            CDolgnost m_dolgnost;
+            CProfile m_profile;
     };
 }
 #endif // PERSON_H

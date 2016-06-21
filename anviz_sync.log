@@ -1,0 +1,15 @@
+ADD PERSON BY READING FILES
+//srv-app/anviz_sync/users/РќРёРєРѕР»Р°РµРЅРєРѕРђРЅР°С‚РѕР»РёР№Р’Р°СЃРёР»СЊРµРІРёС‡.xml
+START SYNC PERSON
+Николаенко Анатолий Васильевич
+ariants by FIO: 
+EXIST person
+MAIN WORKPLACE
+END SYNC PERSON MAIN: SNILS and BIRTH DAY are EQUAL
+//srv-app/anviz_sync/users/РћР±РѕРёРјРѕРІР’Р°Р»РµСЂРёР№РРІР°РЅРѕРІРёС‡.xml
+START SYNC PERSON
+Обоимов Валерий Иванович
+ariants by FIO: 
+EXIST person
+MAIN WORKPLACE
+END SYNC PERSON MAIN: SNILS and BIRTH DAY are EQUAL

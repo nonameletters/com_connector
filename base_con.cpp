@@ -10,6 +10,7 @@ namespace db_connector
     // ---------- ---------- ---------- ---------- ---------- ----------
     CBaseCon::~CBaseCon()
     {
+        // cout << "Base connector distructor." << endl;
         close();
     }
 
@@ -32,9 +33,9 @@ namespace db_connector
     }
 
     // ---------- ---------- ---------- ---------- ---------- ----------
-    QSqlDatabase& CBaseCon::getDatabase()
+    QSqlDatabase CBaseCon::getDatabase()
     {
-        return m_db;
+        return QSqlDatabase::database(getConnectionName());
     }
 
     // ---------- ---------- ---------- ---------- ---------- ----------
@@ -84,12 +85,18 @@ namespace db_connector
     // ---------- ---------- ---------- ---------- ---------- ----------
     QString CBaseCon::connect()
     {
-        cout << "Connection name: " << getConnectionName().toStdString() << endl;
+        cout << "IN CONNECT: Connection name: " << getConnectionName().toStdString() << endl;
+
+        QSqlDatabase m_db;
 
         if (!QSqlDatabase::contains(getConnectionName()))
         {
             m_db = QSqlDatabase::addDatabase(m_driverName, getConnectionName());
         }
+//        else
+//        {
+//            cout << " Connection: " << getConnectionName().toStdString() << " already exist." << endl;
+//        }
         m_db.setDatabaseName(m_dbName);
         m_db.setUserName(m_uName);
         m_db.setPassword(m_uPass);
@@ -99,26 +106,38 @@ namespace db_connector
 
         bool res = false;
 
+//        if (m_db.isValid() == false)
+//        {
+//            cout << "IS VALID FALSE" << endl;
+//        }
+//        else
+//        {
+//            cout << "IS VALID TRUE" << endl;
+//        }
+
         if (m_db.isOpen() == false)
         {
             res = m_db.open();
+//            cout << "DB is CLOSED" << endl;
         }
         else
         {
             res = true;
+//            cout << "DB is OPENED" << endl;
         }
 
         QString resStr;
 
         if (res == true)
         {
-            resStr = "Connection success";
+            resStr = "Connection success";            
         }
         else
         {
             cout << "Database name: " << m_dbName.toStdString().c_str() << endl;
             cout << "User name: " << m_uName.toStdString().c_str() << endl;
             cout << "User password: " << m_uPass.toStdString().c_str() << endl;
+            cout << "Driver name: " << m_driverName.toStdString() << endl;
 
             // resStr = m_db.lastError().text();
             resStr = m_db.lastError().text();
@@ -126,7 +145,7 @@ namespace db_connector
 
         m_conResult = resStr;
 
-        // cout << "From CONNECT: " << m_conResult.toStdString() << endl;
+//        cout << "From CONNECT: " << m_conResult.toStdString() << endl;
 
         return resStr;
     }
@@ -134,7 +153,52 @@ namespace db_connector
     // ---------- ---------- ---------- ---------- ---------- ----------
     void CBaseCon::close()
     {
-        getDatabase().close();
+//        cout << "// ---------- ---------- ---------- ---------- ---------- ----------" << endl;
+//        cout << "Close connection." << endl;
+        //  m_db.close();
+        // getDatabase().close();
+        QStringList l_con = QSqlDatabase::connectionNames();
+        auto it = begin(l_con);
+        for (; it != end(l_con); it++)
+        {
+//            cout << "Con name: " << (*it).toStdString() << endl;
+            {
+                QSqlDatabase l_db = QSqlDatabase::database(*it, false);
+                l_db.close();
+            }
+            QSqlDatabase::removeDatabase(*it);
+
+        }
+
+//        QStringList l_driver = QSqlDatabase::connectionNames();
+//        it = begin(l_driver);
+//        for (; it != end(l_driver); it++)
+//        {
+//            cout << "Driver name: " << (*it).toStdString() << endl;
+//        }
+
+//        cout << "GetConnectionName: " << getConnectionName().toStdString() << endl;
+//        QSqlDatabase::removeDatabase(getConnectionName());
+
+//        cout << "SECOND ITERATION" << endl;
+
+//        l_con = QSqlDatabase::connectionNames();
+//        it = begin(l_con);
+//        for (; it != end(l_con); it++)
+//        {
+//            cout << "Con name2: " << (*it).toStdString() << endl;
+//            // QSqlDatabase::removeDatabase(*it);
+//        }
+
+//        l_driver = QSqlDatabase::connectionNames();
+//        it = begin(l_driver);
+//        for (; it != end(l_driver); it++)
+//        {
+//            cout << "Driver name2: " << (*it).toStdString() << endl;
+//        }
+
+        // getDatabase().close();
+//        cout << "END BASE CONSTRUCTOR ---------- ---------- ---------- ---------- ---------- ----------" << endl;
     }
 
     // ---------- ---------- ---------- ---------- ---------- ----------
