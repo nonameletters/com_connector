@@ -239,6 +239,13 @@ int main(int argc, char *argv[])
                 }
             }
         }
+        else if (l_firstParam == 8)
+        {
+            while(true)
+            {
+
+            }
+        }
         else
         {
             cout << "Wrong param." << endl;
