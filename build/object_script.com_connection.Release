@@ -10,11 +10,16 @@ INPUT(
 ./release\person.o
 ./release\ccon_anviz.o
 ./release\logger.o
-./release\functions.o
 ./release\ccon_tc.o
 ./release\ccon_file.o
 ./release\dolgnost.o
 ./release\profile.o
 ./release\door.o
+./release\syncronizer.o
+./release\commonfunction.o
+./release\runparams.o
+./release\qtservice.o
+./release\starter.o
+./release\qtservice_win.o
 ./release\moc_mainwindow.o
 );

@@ -23,6 +23,7 @@ namespace db_connector
             virtual QString getConnectionName();
             virtual QString getConnectionResult() const;
             virtual vector<CPerson*> getPersonList();
+            virtual vector<CPerson*> getPersonListWithNullProfile();
             virtual vector<CPerson*> getPersonListByTabNumber(const QString& tabNum);
             virtual void addPerson(const CPerson* person);
             virtual void addPerson(const CPerson* person, const QString& deptNum);
@@ -46,11 +47,19 @@ namespace db_connector
             virtual CProfile createNewProfileByPerson(const CPerson* person);
             virtual vector<CDoor> createNewProfileDoors(const QString& pfId);
             virtual void updatePersonProfile(const CPerson* person);
+            virtual void addLineToAccessMatrix(const vector<string>& row);
+            virtual vector<CDoor> getDoorsByDolgnost(const QString& dolj);
+            virtual bool isFired(const CPerson* person);
+            virtual void updatePersonAccessDoors();
+            virtual void closeDoorsForProfile(const CProfile& profile);
 
             QString getNextId(const QString& table, const QString& column);
+            virtual void clearAccessMatrix();
 
         private:
             void moveGenId(const QString& genName, const QString& val);
+            void updateCurDoorEnterMode(const QString& profileId, const QString& doorId, const QString& enterMode);
+            void addNewDoorToProfileWithEnterMode(const QString& profileId, const QString& doorId, const QString& enterMode);
     };
 
 }

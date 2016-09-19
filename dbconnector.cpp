@@ -35,6 +35,13 @@ namespace db_connector
     }
 
     // ---------- ---------- ---------- ---------- ---------- ----------
+    vector<CPerson*> CDbConnector::getPersonListWithNullProfile()
+    {
+        throwIfNull(pm_connector, "In \"getPersonList()\" null member");
+        return pm_connector->getPersonListWithNullProfile();
+    }
+
+    // ---------- ---------- ---------- ---------- ---------- ----------
     vector<CPerson*> CDbConnector::getPersonListByPerson(const CPerson* empl)
     {
         throwIfNull(pm_connector, "In \"getPersonListByPerson()\" null member");
@@ -193,6 +200,41 @@ namespace db_connector
     {
         throwIfNull(pm_connector, "In \"updatePersonProfile()\" null member");
         return pm_connector->updatePersonProfile(person);
+    }
+
+    // ---------- ---------- ---------- ---------- ---------- ----------
+    void CDbConnector::addLineToAccessMatrix(const vector<string>& row)
+    {
+        throwIfNull(pm_connector, "In \"addLineToAccessMatrix()\" null member");
+        return pm_connector->addLineToAccessMatrix(row);
+    }
+
+    // ---------- ---------- ---------- ---------- ---------- ----------
+    vector<CDoor> CDbConnector::getDoorsByDolgnost(const QString& dolj)
+    {
+        throwIfNull(pm_connector, "In \"getDoorsByDolgnost()\" null member");
+        return pm_connector->getDoorsByDolgnost(dolj);
+    }
+
+    // ---------- ---------- ---------- ---------- ---------- ----------
+    bool CDbConnector::isFired(const CPerson* person)
+    {
+        throwIfNull(pm_connector, "In \"isFired()\" null member");
+        return pm_connector->isFired(person);
+    }
+
+    // ---------- ---------- ---------- ---------- ---------- ----------
+    void CDbConnector::updatePersonAccessDoors()
+    {
+        throwIfNull(pm_connector, "In \"updatePersonAccessDoors()\" null member");
+        return pm_connector->updatePersonAccessDoors();
+    }
+
+    // ---------- ---------- ---------- ---------- ---------- ----------
+    void CDbConnector::clearAccessMatrix()
+    {
+        throwIfNull(pm_connector, "In \"clearAccessMatrix()\" null member");
+        return pm_connector->clearAccessMatrix();
     }
 
     // ---------- ---------- ---------- ---------- ---------- ----------

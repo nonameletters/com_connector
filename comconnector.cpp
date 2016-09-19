@@ -72,7 +72,7 @@ namespace nsComConnector
         IDispatch* l_dolg = NULL;
         while (nextRes != false)
         {
-//            if (count >= 20)
+//            if (count >= 100)
 //            {
 //                break;
 //            }
@@ -83,17 +83,6 @@ namespace nsComConnector
 
             LL << QString::number(count);
 
-            execInvoke(L"Актуальность", L"", DISPATCH_PROPERTYGET, 0, nextObject, &m_resInvoke);
-            bool activity = m_resInvoke.boolVal;
-            if (activity == false)
-            {
-                OLL << "\tNot active person.";
-                execInvoke(L"Next", L"", DISPATCH_METHOD, 0, nextObject, &m_resInvoke);
-                nextRes = m_resInvoke.boolVal;
-                count++;
-                continue;
-            }
-
             execInvoke(L"ПометкаУдаления", L"", DISPATCH_PROPERTYGET, 0, nextObject, &m_resInvoke);
             bool deleted = m_resInvoke.boolVal;
             if (deleted)
@@ -103,6 +92,17 @@ namespace nsComConnector
                 nextRes = m_resInvoke.boolVal;
                 count++;
                 continue;
+            }
+
+            execInvoke(L"Актуальность", L"", DISPATCH_PROPERTYGET, 0, nextObject, &m_resInvoke);
+            bool activity = m_resInvoke.boolVal;
+            if (activity == false)
+            {
+                OLL << "\tNot active person.";
+//                execInvoke(L"Next", L"", DISPATCH_METHOD, 0, nextObject, &m_resInvoke);
+//                nextRes = m_resInvoke.boolVal;
+//                count++;
+//                continue;
             }
 
             CPerson* newEmployee = new CPerson();

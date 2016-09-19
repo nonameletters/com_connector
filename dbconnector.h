@@ -58,6 +58,7 @@ namespace db_connector
 
             virtual QString getConnectionResult() const;
             virtual vector<CPerson*> getPersonList();
+            virtual vector<CPerson*> getPersonListWithNullProfile();
             virtual QString getCreateStatus() const;
             virtual void addPerson(const CPerson* person);
             virtual void addPerson(const CPerson* person, const QString& deptNum);
@@ -81,6 +82,12 @@ namespace db_connector
             virtual CProfile createNewProfileByPerson(const CPerson* person);
             virtual vector<CDoor> createNewProfileDoors(const QString& pfId);
             virtual void updatePersonProfile(const CPerson* person);
+            virtual void addLineToAccessMatrix(const vector<string>& row);
+            virtual vector<CDoor> getDoorsByDolgnost(const QString& dolj);
+            virtual bool isFired(const CPerson* person);
+            virtual void updatePersonAccessDoors();
+            virtual void clearAccessMatrix();
+
         protected:
             CDbConnector();
 

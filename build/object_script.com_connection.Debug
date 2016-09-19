@@ -10,11 +10,16 @@ INPUT(
 ./debug\person.o
 ./debug\ccon_anviz.o
 ./debug\logger.o
-./debug\functions.o
 ./debug\ccon_tc.o
 ./debug\ccon_file.o
 ./debug\dolgnost.o
 ./debug\profile.o
 ./debug\door.o
+./debug\syncronizer.o
+./debug\commonfunction.o
+./debug\runparams.o
+./debug\qtservice.o
+./debug\starter.o
+./debug\qtservice_win.o
 ./debug\moc_mainwindow.o
 );

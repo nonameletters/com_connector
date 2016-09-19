@@ -25,12 +25,14 @@ SOURCES += main.cpp\
     person.cpp \
     ccon_anviz.cpp \
     logger.cpp \
-    functions.cpp \
     ccon_tc.cpp \
     ccon_file.cpp \
     dolgnost.cpp \
     profile.cpp \
-    door.cpp
+    door.cpp \
+    syncronizer.cpp \
+    commonfunction.cpp \
+    runparams.cpp
 
 HEADERS  += mainwindow.h \
     employee.h \
@@ -43,12 +45,14 @@ HEADERS  += mainwindow.h \
     ccon_anviz.h \
     logger.h \
     constansts.h \
-    functions.h \
     ccon_tc.h \
     ccon_file.h \
     dolgnost.h \
     profile.h \
-    door.h
+    door.h \
+    syncronizer.h \
+    commonfunction.h \
+    runparams.h
 
 FORMS    += mainwindow.ui
 
@@ -58,3 +62,5 @@ LIBS += -lOle32 -luser32 -lkernel32 -lstrmiids -luuid -loleaut32
 
 INCLUDEPATH += "c:/Program Files (x86)/Microsoft Visual Studio 12.0/VC/atlmfc/include/"
 #DEPENDPATH += "C:/Program Files (x86)/Windows Kits/8.1/Lib/winv6.3/um/x64"
+
+include(qtservice/qtservice.pri)

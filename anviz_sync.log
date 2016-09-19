@@ -1,15 +1,2124 @@
 ADD PERSON BY READING FILES
-//srv-app/anviz_sync/users/РќРёРєРѕР»Р°РµРЅРєРѕРђРЅР°С‚РѕР»РёР№Р’Р°СЃРёР»СЊРµРІРёС‡.xml
-START SYNC PERSON
-Николаенко Анатолий Васильевич
-ariants by FIO: 
-EXIST person
-MAIN WORKPLACE
-END SYNC PERSON MAIN: SNILS and BIRTH DAY are EQUAL
-//srv-app/anviz_sync/users/РћР±РѕРёРјРѕРІР’Р°Р»РµСЂРёР№РРІР°РЅРѕРІРёС‡.xml
-START SYNC PERSON
-Обоимов Валерий Иванович
-ariants by FIO: 
-EXIST person
-MAIN WORKPLACE
-END SYNC PERSON MAIN: SNILS and BIRTH DAY are EQUAL
+USER FILE NAME
+//srv-app/anviz_sync/users/АлександровГеннадийЮрьевич.xml
+	START SYNC PERSON
+PERSON INFO
+	   FNAME: Александров
+	   SNAME: Геннадий
+	   LNAME: Юрьевич
+	 FL_NAME: Александров Геннадий Юрьевич
+	   T_NUM: ДЭН0000071
+	     SID: 
+	   G_SID: 267
+	     INN: 
+	   SNILS: 147-182-026 53
+	   B_DAY: 08-11-1991
+	     DOG: ТрудовойДоговор
+	     ZAN: ОсновноеМестоРаботы
+	R_ID_POS: 
+	   K_POS: 00046
+	     POS: Помощник юриста
+		ID IS
+		351
+		ID IS
+		351
+	Variants by FIO: 1
+	Variants by TAB NUM: 1
+		Updating EXIST person.
+		KOD IS
+		00046
+		PERSON VZ
+		ОсновноеМестоРаботы
+		COMPARABLE VZ
+		ОсновноеМестоРаботы
+		SYNC MAIN WORKPLACE.
+Profile id from updatePersonProfile
+6
+			DB PERSON
+PERSON INFO
+	   FNAME: Александров
+	   SNAME: Геннадий
+	   LNAME: Юрьевич
+	 FL_NAME: Александров Геннадий Юрьевич
+	   T_NUM: ДЭН0000071
+	     SID: 64
+	   G_SID: 0
+	     INN: 147-182-026 53
+	   SNILS: 147-182-026 53
+	   B_DAY: 10-11-1991
+	     DOG: 
+	     ZAN: 
+	R_ID_POS: 351
+	   K_POS: ДЭН00046
+	     POS: Помощник юриста
+S
+	END SYNC CURRENT PERSON.
+USER FILE NAME
+//srv-app/anviz_sync/users/БобковАлександрЕвгеньевич.xml
+	START SYNC PERSON
+PERSON INFO
+	   FNAME: Бобков
+	   SNAME: Александр
+	   LNAME: Евгеньевич
+	 FL_NAME: Бобков Александр Евгеньевич
+	   T_NUM: Э000000233
+	     SID: 
+	   G_SID: 269
+	     INN: 
+	   SNILS: 147-182-026 53
+	   B_DAY: 05-07-1985
+	     DOG: ТрудовойДоговор
+	     ZAN: ОсновноеМестоРаботы
+	R_ID_POS: 
+	   K_POS: 000000001
+	     POS: Базовая
+		ID IS
+		358
+		ID IS
+		358
+	Variants by FIO: 1
+	Variants by TAB NUM: 1
+		Updating EXIST person.
+		KOD IS
+		000000001
+		PERSON VZ
+		ОсновноеМестоРаботы
+		COMPARABLE VZ
+		ОсновноеМестоРаботы
+		SYNC MAIN WORKPLACE.
+Profile id from updatePersonProfile
+27
+			DB PERSON
+PERSON INFO
+	   FNAME: Бобков
+	   SNAME: Александр
+	   LNAME: Евгеньевич
+	 FL_NAME: Бобков Александр Евгеньевич
+	   T_NUM: Э000000233
+	     SID: 2708
+	   G_SID: 0
+	     INN: temp
+	   SNILS: temp
+	   B_DAY: 07-07-1985
+	     DOG: 
+	     ZAN: 
+	R_ID_POS: 358
+	   K_POS: Э000000001
+	     POS: Базовая
+	END SYNC CURRENT PERSON.
+USER FILE NAME
+//srv-app/anviz_sync/users/ВетровПавелВалерьевич.xml
+	START SYNC PERSON
+PERSON INFO
+	   FNAME: Ветров
+	   SNAME: Павел
+	   LNAME: Валерьевич
+	 FL_NAME: Ветров Павел Валерьевич
+	   T_NUM: Э000000238
+	     SID: 
+	   G_SID: 269
+	     INN: 
+	   SNILS: 147-182-026 53
+	   B_DAY: 26-05-1992
+	     DOG: ТрудовойДоговор
+	     ZAN: ОсновноеМестоРаботы
+	R_ID_POS: 
+	   K_POS: 000000001
+	     POS: Базовая
+		ID IS
+		358
+		ID IS
+		358
+	Variants by FIO: 1
+	Variants by TAB NUM: 1
+		Updating EXIST person.
+		KOD IS
+		000000001
+		PERSON VZ
+		ОсновноеМестоРаботы
+		COMPARABLE VZ
+		ОсновноеМестоРаботы
+		SYNC MAIN WORKPLACE.
+Profile id from updatePersonProfile
+89
+			DB PERSON
+PERSON INFO
+	   FNAME: Ветров
+	   SNAME: Павел
+	   LNAME: Валерьевич
+	 FL_NAME: Ветров Павел Валерьевич
+	   T_NUM: Э000000238
+	     SID: 2736
+	   G_SID: 0
+	     INN: temp
+	   SNILS: temp
+	   B_DAY: 28-05-1992
+	     DOG: 
+	     ZAN: 
+	R_ID_POS: 358
+	   K_POS: Э000000001
+	     POS: Базовая
+	END SYNC CURRENT PERSON.
+USER FILE NAME
+//srv-app/anviz_sync/users/ДорохинНиколайАлександрович.xml
+	START SYNC PERSON
+PERSON INFO
+	   FNAME: Дорохин
+	   SNAME: Николай
+	   LNAME: Александрович
+	 FL_NAME: Дорохин Николай Александрович
+	   T_NUM: Э000000235
+	     SID: 
+	   G_SID: 269
+	     INN: 
+	   SNILS: 147-182-026 53
+	   B_DAY: 21-12-1984
+	     DOG: ТрудовойДоговор
+	     ZAN: ОсновноеМестоРаботы
+	R_ID_POS: 
+	   K_POS: 000000001
+	     POS: Базовая
+		ID IS
+		358
+		ID IS
+		358
+	Variants by FIO: 1
+	Variants by TAB NUM: 1
+		Updating EXIST person.
+		KOD IS
+		000000001
+		PERSON VZ
+		ОсновноеМестоРаботы
+		COMPARABLE VZ
+		ОсновноеМестоРаботы
+		SYNC MAIN WORKPLACE.
+Profile id from updatePersonProfile
+104
+			DB PERSON
+PERSON INFO
+	   FNAME: Дорохин
+	   SNAME: Николай
+	   LNAME: Александрович
+	 FL_NAME: Дорохин Николай Александрович
+	   T_NUM: Э000000235
+	     SID: 2712
+	   G_SID: 0
+	     INN: temp
+	   SNILS: temp
+	   B_DAY: 23-12-1984
+	     DOG: 
+	     ZAN: 
+	R_ID_POS: 358
+	   K_POS: Э000000001
+	     POS: Базовая
+	END SYNC CURRENT PERSON.
+USER FILE NAME
+//srv-app/anviz_sync/users/ЕвстигнееваАнгелинаНиколаевна.xml
+	START SYNC PERSON
+PERSON INFO
+	   FNAME: Евстигнеева
+	   SNAME: Ангелина
+	   LNAME: Николаевна
+	 FL_NAME: Евстигнеева Ангелина Николаевна
+	   T_NUM: Э000000237
+	     SID: 
+	   G_SID: 269
+	     INN: 
+	   SNILS: 147-182-026 53
+	   B_DAY: 15-03-1990
+	     DOG: ТрудовойДоговор
+	     ZAN: ОсновноеМестоРаботы
+	R_ID_POS: 
+	   K_POS: 000000001
+	     POS: Базовая
+		ID IS
+		358
+		ID IS
+		358
+	Variants by FIO: 1
+	Variants by TAB NUM: 1
+		Updating EXIST person.
+		KOD IS
+		000000001
+		PERSON VZ
+		ОсновноеМестоРаботы
+		COMPARABLE VZ
+		ОсновноеМестоРаботы
+		SYNC MAIN WORKPLACE.
+Profile id from updatePersonProfile
+107
+			DB PERSON
+PERSON INFO
+	   FNAME: Евстигнеева
+	   SNAME: Ангелина
+	   LNAME: Николаевна
+	 FL_NAME: Евстигнеева Ангелина Николаевна
+	   T_NUM: Э000000237
+	     SID: 2737
+	   G_SID: 0
+	     INN: temp
+	   SNILS: temp
+	   B_DAY: 17-03-1990
+	     DOG: 
+	     ZAN: 
+	R_ID_POS: 358
+	   K_POS: Э000000001
+	     POS: Базовая
+	END SYNC CURRENT PERSON.
+USER FILE NAME
+//srv-app/anviz_sync/users/ЕреминаЖаннаВладимировна.xml
+	START SYNC PERSON
+PERSON INFO
+	   FNAME: Еремина
+	   SNAME: Жанна
+	   LNAME: Владимировна
+	 FL_NAME: Еремина Жанна Владимировна
+	   T_NUM: Э000000246
+	     SID: 
+	   G_SID: 269
+	     INN: 
+	   SNILS: 147-182-026 53
+	   B_DAY: 13-06-1968
+	     DOG: ТрудовойДоговор
+	     ZAN: ОсновноеМестоРаботы
+	R_ID_POS: 
+	   K_POS: 000000001
+	     POS: Базовая
+		ID IS
+		358
+		ID IS
+		358
+	Variants by FIO: 1
+	Variants by TAB NUM: 1
+		Updating EXIST person.
+		KOD IS
+		000000001
+		PERSON VZ
+		ОсновноеМестоРаботы
+		COMPARABLE VZ
+		ОсновноеМестоРаботы
+		SYNC MAIN WORKPLACE.
+Profile id from updatePersonProfile
+110
+			DB PERSON
+PERSON INFO
+	   FNAME: Еремина
+	   SNAME: Жанна
+	   LNAME: Владимировна
+	 FL_NAME: Еремина Жанна Владимировна
+	   T_NUM: Э000000246
+	     SID: 2746
+	   G_SID: 0
+	     INN: temp
+	   SNILS: temp
+	   B_DAY: 15-06-1968
+	     DOG: 
+	     ZAN: 
+	R_ID_POS: 358
+	   K_POS: Э000000001
+	     POS: Базовая
+	END SYNC CURRENT PERSON.
+USER FILE NAME
+//srv-app/anviz_sync/users/ЖбаковКонстантинМихайлович.xml
+	START SYNC PERSON
+PERSON INFO
+	   FNAME: Жбаков
+	   SNAME: Константин
+	   LNAME: Михайлович
+	 FL_NAME: Жбаков Константин Михайлович
+	   T_NUM: Э000000039
+	     SID: 
+	   G_SID: 270
+	     INN: 
+	   SNILS: 001-631-476 94
+	   B_DAY: 13-05-1964
+	     DOG: ТрудовойДоговор
+	     ZAN: ОсновноеМестоРаботы
+	R_ID_POS: 
+	   K_POS: 000000036
+	     POS: Бренд - шеф-повар
+EMPTY DOLJNOST ID
+		ID IS
+		358
+	Variants by FIO: 1
+	Variants by TAB NUM: 1
+		Updating EXIST person.
+		KOD IS
+		000000036
+DOLJNOST KOD IS
+000000036
+SELECT MAX(ID) + 1 AS ID FROM DICTLIST_DET
+1---1
+471
+Result is
+471
+Next ID is
+471
+BEFORE EXEC
+Бренд - шеф-повар
+000000036
+Doljnost is created
+471
+		PERSON VZ
+		ОсновноеМестоРаботы
+		COMPARABLE VZ
+		ОсновноеМестоРаботы
+		SYNC MAIN WORKPLACE.
+Profile id from updatePersonProfile
+2451
+			DB PERSON
+PERSON INFO
+	   FNAME: Хорошин
+	   SNAME: Максим
+	   LNAME: Алексеевич
+	 FL_NAME: Хорошин Максим Алексеевич
+	   T_NUM: Э000000039
+	     SID: 2351
+	   G_SID: 0
+	     INN: temp
+	   SNILS: temp
+	   B_DAY: 23-05-1991
+	     DOG: 
+	     ZAN: 
+	R_ID_POS: 358
+	   K_POS: Э000000001
+	     POS: Базовая
+	END SYNC CURRENT PERSON.
+USER FILE NAME
+//srv-app/anviz_sync/users/ЗахароваЛюдмилаВасильевна.xml
+	START SYNC PERSON
+PERSON INFO
+	   FNAME: Захарова
+	   SNAME: Людмила
+	   LNAME: Васильевна
+	 FL_NAME: Захарова Людмила Васильевна
+	   T_NUM: ТД00000659
+	     SID: 
+	   G_SID: 268
+	     INN: 
+	   SNILS: 024-195-314 29
+	   B_DAY: 06-03-1957
+	     DOG: ТрудовойДоговор
+	     ZAN: ОсновноеМестоРаботы
+	R_ID_POS: 
+	   K_POS: 00280
+	     POS: Коренщик
+		ID IS
+		468
+		ID IS
+		468
+	Variants by FIO: 1
+	Variants by TAB NUM: 1
+		Updating EXIST person.
+		KOD IS
+		00280
+		PERSON VZ
+		ОсновноеМестоРаботы
+		COMPARABLE VZ
+		ОсновноеМестоРаботы
+		SYNC MAIN WORKPLACE.
+Profile id from updatePersonProfile
+71
+			DB PERSON
+PERSON INFO
+	   FNAME: Захарова
+	   SNAME: Людмила
+	   LNAME: Васильевна
+	 FL_NAME: Захарова Людмила Васильевна
+	   T_NUM: ТД00000659
+	     SID: 2724
+	   G_SID: 0
+	     INN: 024-195-314 29
+	   SNILS: 024-195-314 29
+	   B_DAY: 08-03-1957
+	     DOG: 
+	     ZAN: 
+	R_ID_POS: 468
+	   K_POS: ТД00280
+	     POS: Коренщик
+S
+	END SYNC CURRENT PERSON.
+USER FILE NAME
+//srv-app/anviz_sync/users/ЗвягинаЛарисаНиколаевна.xml
+	START SYNC PERSON
+PERSON INFO
+	   FNAME: Звягина
+	   SNAME: Лариса
+	   LNAME: Николаевна
+	 FL_NAME: Звягина Лариса Николаевна
+	   T_NUM: ТД00000667
+	     SID: 
+	   G_SID: 268
+	     INN: 
+	   SNILS: 011-986-689 75
+	   B_DAY: 15-09-1962
+	     DOG: ТрудовойДоговор
+	     ZAN: ОсновноеМестоРаботы
+	R_ID_POS: 
+	   K_POS: 00239
+	     POS: Продавец продовольственных товаров
+		ID IS
+		431
+		ID IS
+		431
+	Variants by FIO: 1
+	Variants by TAB NUM: 1
+		Updating EXIST person.
+		KOD IS
+		00239
+		PERSON VZ
+		ОсновноеМестоРаботы
+		COMPARABLE VZ
+		ОсновноеМестоРаботы
+		SYNC MAIN WORKPLACE.
+Profile id from updatePersonProfile
+72
+			DB PERSON
+PERSON INFO
+	   FNAME: Звягина
+	   SNAME: Лариса
+	   LNAME: Николаевна
+	 FL_NAME: Звягина Лариса Николаевна
+	   T_NUM: ТД00000667
+	     SID: 2725
+	   G_SID: 0
+	     INN: 011-986-689 75
+	   SNILS: 011-986-689 75
+	   B_DAY: 17-09-1962
+	     DOG: 
+	     ZAN: 
+	R_ID_POS: 431
+	   K_POS: ТД00239
+	     POS: Продавец продовольственных товаров
+S
+	END SYNC CURRENT PERSON.
+USER FILE NAME
+//srv-app/anviz_sync/users/ЗикинаИннаЮрьевна.xml
+	START SYNC PERSON
+PERSON INFO
+	   FNAME: Зикина
+	   SNAME: Инна
+	   LNAME: Юрьевна
+	 FL_NAME: Зикина Инна Юрьевна
+	   T_NUM: ТД00000668
+	     SID: 
+	   G_SID: 268
+	     INN: 
+	   SNILS: 017-205-836 24
+	   B_DAY: 24-09-1963
+	     DOG: ТрудовойДоговор
+	     ZAN: ОсновноеМестоРаботы
+	R_ID_POS: 
+	   K_POS: 00271
+	     POS: Посудомойщик
+		ID IS
+		446
+		ID IS
+		446
+	Variants by FIO: 1
+	Variants by TAB NUM: 1
+		Updating EXIST person.
+		KOD IS
+		00271
+		PERSON VZ
+		ОсновноеМестоРаботы
+		COMPARABLE VZ
+		ОсновноеМестоРаботы
+		SYNC MAIN WORKPLACE.
+Profile id from updatePersonProfile
+73
+			DB PERSON
+PERSON INFO
+	   FNAME: Зикина
+	   SNAME: Инна
+	   LNAME: Юрьевна
+	 FL_NAME: Зикина Инна Юрьевна
+	   T_NUM: ТД00000668
+	     SID: 2726
+	   G_SID: 0
+	     INN: 017-205-836 24
+	   SNILS: 017-205-836 24
+	   B_DAY: 26-09-1963
+	     DOG: 
+	     ZAN: 
+	R_ID_POS: 446
+	   K_POS: ТД00241
+	     POS: Администратор магазина
+S
+ENTER TO UPDATE POSITION
+2726
+SETUP DOLJ VALUE: 469
+	END SYNC CURRENT PERSON.
+USER FILE NAME
+//srv-app/anviz_sync/users/ИвановаОльгаАлександровна.xml
+	START SYNC PERSON
+PERSON INFO
+	   FNAME: Иванова
+	   SNAME: Ольга
+	   LNAME: Александровна
+	 FL_NAME: Иванова Ольга Александровна
+	   T_NUM: ТД00000664
+	     SID: 
+	   G_SID: 268
+	     INN: 
+	   SNILS: 040-547-049 26
+	   B_DAY: 04-01-1974
+	     DOG: ТрудовойДоговор
+	     ZAN: ОсновноеМестоРаботы
+	R_ID_POS: 
+	   K_POS: 00282
+	     POS: Уборщик торгового зала
+EMPTY DOLJNOST ID
+	Variants by FIO: 1
+	Variants by TAB NUM: 0
+		Updating EXIST person.
+		KOD IS
+		00282
+		PERSON VZ
+		ОсновноеМестоРаботы
+		COMPARABLE VZ
+		ОсновноеМестоРаботы
+		SYNC MAIN WORKPLACE.
+Profile id from updatePersonProfile
+74
+			DB PERSON
+PERSON INFO
+	   FNAME: Иванова
+	   SNAME: Ольга
+	   LNAME: Александровна
+	 FL_NAME: Иванова Ольга Александровна
+	   T_NUM: 0000005711
+	     SID: 860
+	   G_SID: 278
+	     INN: 
+	   SNILS: 140-541-801 19
+	   B_DAY: 01-02-1990
+	     DOG: 
+	     ZAN: 
+	R_ID_POS: 
+	   K_POS: 
+	     POS: 
+	END SYNC CURRENT PERSON.
+USER FILE NAME
+//srv-app/anviz_sync/users/КазьминАлексейВладимировна.xml
+	START SYNC PERSON
+PERSON INFO
+	   FNAME: Казьмин
+	   SNAME: Алексей
+	   LNAME: Владимировна
+	 FL_NAME: Казьмин Алексей Владимировна
+	   T_NUM: Э000000245
+	     SID: 
+	   G_SID: 269
+	     INN: 
+	   SNILS: 040-547-049 26
+	   B_DAY: 07-03-1981
+	     DOG: ТрудовойДоговор
+	     ZAN: ОсновноеМестоРаботы
+	R_ID_POS: 
+	   K_POS: 000000001
+	     POS: Базовая
+		ID IS
+		358
+		ID IS
+		358
+	Variants by FIO: 1
+	Variants by TAB NUM: 1
+		Updating EXIST person.
+		KOD IS
+		000000001
+		PERSON VZ
+		ОсновноеМестоРаботы
+		COMPARABLE VZ
+		ОсновноеМестоРаботы
+		SYNC MAIN WORKPLACE.
+Profile id from updatePersonProfile
+126
+			DB PERSON
+PERSON INFO
+	   FNAME: Казьмин
+	   SNAME: Алексей
+	   LNAME: Владимировна
+	 FL_NAME: Казьмин Алексей Владимировна
+	   T_NUM: Э000000245
+	     SID: 2738
+	   G_SID: 0
+	     INN: temp
+	   SNILS: temp
+	   B_DAY: 09-03-1981
+	     DOG: 
+	     ZAN: 
+	R_ID_POS: 358
+	   K_POS: Э000000001
+	     POS: Базовая
+	END SYNC CURRENT PERSON.
+USER FILE NAME
+//srv-app/anviz_sync/users/КарпенкоРоманРусланович.xml
+	START SYNC PERSON
+PERSON INFO
+	   FNAME: Карпенко
+	   SNAME: Роман
+	   LNAME: Русланович
+	 FL_NAME: Карпенко Роман Русланович
+	   T_NUM: ТД00000654
+	     SID: 
+	   G_SID: 268
+	     INN: 
+	   SNILS: 108-811-843 56
+	   B_DAY: 29-05-1990
+	     DOG: ТрудовойДоговор
+	     ZAN: ОсновноеМестоРаботы
+	R_ID_POS: 
+	   K_POS: 00276
+	     POS: Инженер-программист
+		ID IS
+		466
+		ID IS
+		466
+	Variants by FIO: 1
+	Variants by TAB NUM: 1
+		Updating EXIST person.
+		KOD IS
+		00276
+		PERSON VZ
+		ОсновноеМестоРаботы
+		COMPARABLE VZ
+		ОсновноеМестоРаботы
+		SYNC MAIN WORKPLACE.
+Profile id from updatePersonProfile
+2294
+			DB PERSON
+PERSON INFO
+	   FNAME: Карпенко
+	   SNAME: Роман
+	   LNAME: Русланович
+	 FL_NAME: Карпенко Роман Русланович
+	   T_NUM: ТД00000654
+	     SID: 2684
+	   G_SID: 0
+	     INN: 108-811-843 56
+	   SNILS: 108-811-843 56
+	   B_DAY: 31-05-1990
+	     DOG: 
+	     ZAN: 
+	R_ID_POS: 466
+	   K_POS: ТД00276
+	     POS: Инженер-программист
+S
+	END SYNC CURRENT PERSON.
+USER FILE NAME
+//srv-app/anviz_sync/users/КоняеваОльгаЮрьевна.xml
+	START SYNC PERSON
+PERSON INFO
+	   FNAME: Коняева
+	   SNAME: Ольга
+	   LNAME: Юрьевна
+	 FL_NAME: Коняева Ольга Юрьевна
+	   T_NUM: ТД00000666
+	     SID: 
+	   G_SID: 268
+	     INN: 
+	   SNILS: 040-165-562 16
+	   B_DAY: 08-08-1967
+	     DOG: ТрудовойДоговор
+	     ZAN: ОсновноеМестоРаботы
+	R_ID_POS: 
+	   K_POS: 00271
+	     POS: Посудомойщик
+		ID IS
+		469
+		ID IS
+		469
+	Variants by FIO: 1
+	Variants by TAB NUM: 1
+		Updating EXIST person.
+		KOD IS
+		00271
+		PERSON VZ
+		ОсновноеМестоРаботы
+		COMPARABLE VZ
+		ОсновноеМестоРаботы
+		SYNC MAIN WORKPLACE.
+Profile id from updatePersonProfile
+2301
+			DB PERSON
+PERSON INFO
+	   FNAME: Коняева
+	   SNAME: Ольга
+	   LNAME: Юрьевна
+	 FL_NAME: Коняева Ольга Юрьевна
+	   T_NUM: ТД00000666
+	     SID: 2727
+	   G_SID: 0
+	     INN: 040-165-562 16
+	   SNILS: 040-165-562 16
+	   B_DAY: 10-08-1967
+	     DOG: 
+	     ZAN: 
+	R_ID_POS: 469
+	   K_POS: ТД00271
+	     POS: Посудомойщик
+S
+	END SYNC CURRENT PERSON.
+USER FILE NAME
+//srv-app/anviz_sync/users/КотовСергейВадимович.xml
+	START SYNC PERSON
+PERSON INFO
+	   FNAME: Котов
+	   SNAME: Сергей
+	   LNAME: Вадимович
+	 FL_NAME: Котов Сергей Вадимович
+	   T_NUM: Э000000239
+	     SID: 
+	   G_SID: 269
+	     INN: 
+	   SNILS: 040-165-562 16
+	   B_DAY: 27-07-1979
+	     DOG: ТрудовойДоговор
+	     ZAN: ОсновноеМестоРаботы
+	R_ID_POS: 
+	   K_POS: 000000001
+	     POS: Базовая
+		ID IS
+		358
+		ID IS
+		358
+	Variants by FIO: 1
+	Variants by TAB NUM: 1
+		Updating EXIST person.
+		KOD IS
+		000000001
+		PERSON VZ
+		ОсновноеМестоРаботы
+		COMPARABLE VZ
+		ОсновноеМестоРаботы
+		SYNC MAIN WORKPLACE.
+Profile id from updatePersonProfile
+2358
+			DB PERSON
+PERSON INFO
+	   FNAME: Котов
+	   SNAME: Сергей
+	   LNAME: Вадимович
+	 FL_NAME: Котов Сергей Вадимович
+	   T_NUM: Э000000239
+	     SID: 2739
+	   G_SID: 0
+	     INN: temp
+	   SNILS: temp
+	   B_DAY: 29-07-1979
+	     DOG: 
+	     ZAN: 
+	R_ID_POS: 358
+	   K_POS: Э000000001
+	     POS: Базовая
+	END SYNC CURRENT PERSON.
+USER FILE NAME
+//srv-app/anviz_sync/users/КрыловаНадеждаСергеевна.xml
+	START SYNC PERSON
+PERSON INFO
+	   FNAME: Крылова
+	   SNAME: Надежда
+	   LNAME: Сергеевна
+	 FL_NAME: Крылова Надежда Сергеевна
+	   T_NUM: ТД00000658
+	     SID: 
+	   G_SID: 268
+	     INN: 
+	   SNILS: 053-550-098 41
+	   B_DAY: 20-09-1980
+	     DOG: ТрудовойДоговор
+	     ZAN: ОсновноеМестоРаботы
+	R_ID_POS: 
+	   K_POS: 00271
+	     POS: Посудомойщик
+		ID IS
+		469
+		ID IS
+		469
+	Variants by FIO: 1
+	Variants by TAB NUM: 1
+		Updating EXIST person.
+		KOD IS
+		00271
+		PERSON VZ
+		ОсновноеМестоРаботы
+		COMPARABLE VZ
+		ОсновноеМестоРаботы
+		SYNC MAIN WORKPLACE.
+Profile id from updatePersonProfile
+2303
+			DB PERSON
+PERSON INFO
+	   FNAME: Крылова
+	   SNAME: Надежда
+	   LNAME: Сергеевна
+	 FL_NAME: Крылова Надежда Сергеевна
+	   T_NUM: ТД00000658
+	     SID: 2728
+	   G_SID: 0
+	     INN: 053-550-098 41
+	   SNILS: 053-550-098 41
+	   B_DAY: 22-09-1980
+	     DOG: 
+	     ZAN: 
+	R_ID_POS: 469
+	   K_POS: ТД00271
+	     POS: Посудомойщик
+S
+	END SYNC CURRENT PERSON.
+USER FILE NAME
+//srv-app/anviz_sync/users/КузнецоваСветланаГермановна.xml
+	START SYNC PERSON
+PERSON INFO
+	   FNAME: Кузнецова
+	   SNAME: Светлана
+	   LNAME: Германовна
+	 FL_NAME: Кузнецова Светлана Германовна
+	   T_NUM: ТД00000661
+	     SID: 
+	   G_SID: 268
+	     INN: 
+	   SNILS: 047-101-842 24
+	   B_DAY: 01-08-1959
+	     DOG: ТрудовойДоговор
+	     ZAN: ОсновноеМестоРаботы
+	R_ID_POS: 
+	   K_POS: 00280
+	     POS: Коренщик
+		ID IS
+		468
+		ID IS
+		468
+	Variants by FIO: 1
+	Variants by TAB NUM: 1
+		Updating EXIST person.
+		KOD IS
+		00280
+		PERSON VZ
+		ОсновноеМестоРаботы
+		COMPARABLE VZ
+		ОсновноеМестоРаботы
+		SYNC MAIN WORKPLACE.
+Profile id from updatePersonProfile
+2306
+			DB PERSON
+PERSON INFO
+	   FNAME: Кузнецова
+	   SNAME: Светлана
+	   LNAME: Германовна
+	 FL_NAME: Кузнецова Светлана Германовна
+	   T_NUM: ТД00000661
+	     SID: 2729
+	   G_SID: 0
+	     INN: 047-101-842 24
+	   SNILS: 047-101-842 24
+	   B_DAY: 03-08-1959
+	     DOG: 
+	     ZAN: 
+	R_ID_POS: 468
+	   K_POS: ТД00280
+	     POS: Коренщик
+S
+	END SYNC CURRENT PERSON.
+USER FILE NAME
+//srv-app/anviz_sync/users/КурмангалиеваМаргаритаЮрьевна.xml
+	START SYNC PERSON
+PERSON INFO
+	   FNAME: Курмангалиева
+	   SNAME: Маргарита
+	   LNAME: Юрьевна
+	 FL_NAME: Курмангалиева Маргарита Юрьевна
+	   T_NUM: ТД00000656
+	     SID: 
+	   G_SID: 268
+	     INN: 
+	   SNILS: 004-235-592 09
+	   B_DAY: 02-02-1960
+	     DOG: ТрудовойДоговор
+	     ZAN: ОсновноеМестоРаботы
+	R_ID_POS: 
+	   K_POS: 00240
+	     POS: Пекарь
+		ID IS
+		436
+		ID IS
+		436
+	Variants by FIO: 1
+	Variants by TAB NUM: 1
+		Updating EXIST person.
+		KOD IS
+		00240
+		PERSON VZ
+		ОсновноеМестоРаботы
+		COMPARABLE VZ
+		ОсновноеМестоРаботы
+		SYNC MAIN WORKPLACE.
+Profile id from updatePersonProfile
+2308
+			DB PERSON
+PERSON INFO
+	   FNAME: Курмангалиева
+	   SNAME: Маргарита
+	   LNAME: Юрьевна
+	 FL_NAME: Курмангалиева Маргарита Юрьевна
+	   T_NUM: ТД00000656
+	     SID: 2730
+	   G_SID: 0
+	     INN: 004-235-592 09
+	   SNILS: 004-235-592 09
+	   B_DAY: 04-02-1960
+	     DOG: 
+	     ZAN: 
+	R_ID_POS: 436
+	   K_POS: ТД00240
+	     POS: Пекарь
+S
+	END SYNC CURRENT PERSON.
+USER FILE NAME
+//srv-app/anviz_sync/users/КутыреваЮлияВладимировна.xml
+	START SYNC PERSON
+PERSON INFO
+	   FNAME: Кутырева
+	   SNAME: Юлия
+	   LNAME: Владимировна
+	 FL_NAME: Кутырева Юлия Владимировна
+	   T_NUM: Э000000247
+	     SID: 
+	   G_SID: 269
+	     INN: 
+	   SNILS: 004-235-592 09
+	   B_DAY: 28-06-1970
+	     DOG: ТрудовойДоговор
+	     ZAN: ОсновноеМестоРаботы
+	R_ID_POS: 
+	   K_POS: 000000001
+	     POS: Базовая
+		ID IS
+		358
+		ID IS
+		358
+	Variants by FIO: 1
+	Variants by TAB NUM: 1
+		Updating EXIST person.
+		KOD IS
+		000000001
+		PERSON VZ
+		ОсновноеМестоРаботы
+		COMPARABLE VZ
+		ОсновноеМестоРаботы
+		SYNC MAIN WORKPLACE.
+Profile id from updatePersonProfile
+2364
+			DB PERSON
+PERSON INFO
+	   FNAME: Кутырева
+	   SNAME: Юлия
+	   LNAME: Владимировна
+	 FL_NAME: Кутырева Юлия Владимировна
+	   T_NUM: Э000000247
+	     SID: 2749
+	   G_SID: 0
+	     INN: temp
+	   SNILS: temp
+	   B_DAY: 30-06-1970
+	     DOG: 
+	     ZAN: 
+	R_ID_POS: 358
+	   K_POS: Э000000001
+	     POS: Базовая
+	END SYNC CURRENT PERSON.
+USER FILE NAME
+//srv-app/anviz_sync/users/ЛагутинДмитрийАлександрович.xml
+	START SYNC PERSON
+PERSON INFO
+	   FNAME: Лагутин
+	   SNAME: Дмитрий
+	   LNAME: Александрович
+	 FL_NAME: Лагутин Дмитрий Александрович
+	   T_NUM: ФБ00000041
+	     SID: 
+	   G_SID: 270
+	     INN: 
+	   SNILS: 016-028-614 15
+	   B_DAY: 22-01-1972
+	     DOG: ТрудовойДоговор
+	     ZAN: ОсновноеМестоРаботы
+	R_ID_POS: 
+	   K_POS: 000000037
+	     POS: Директор супермаркета "Ильинский"
+		ID IS
+		457
+		ID IS
+		457
+	Variants by FIO: 1
+	Variants by TAB NUM: 1
+		Updating EXIST person.
+		KOD IS
+		000000037
+		PERSON VZ
+		ОсновноеМестоРаботы
+		COMPARABLE VZ
+		ОсновноеМестоРаботы
+		SYNC MAIN WORKPLACE.
+Profile id from updatePersonProfile
+30
+			DB PERSON
+PERSON INFO
+	   FNAME: Лагутин
+	   SNAME: Дмитрий
+	   LNAME: Александрович
+	 FL_NAME: Лагутин Дмитрий Александрович
+	   T_NUM: ФБ00000041
+	     SID: 2706
+	   G_SID: 0
+	     INN: 016-028-614 15
+	   SNILS: 016-028-614 15
+	   B_DAY: 24-01-1972
+	     DOG: 
+	     ZAN: 
+	R_ID_POS: 457
+	   K_POS: ФБ000000037
+	     POS: Директор супермаркета "Ильинский"
+S
+	END SYNC CURRENT PERSON.
+USER FILE NAME
+//srv-app/anviz_sync/users/ЛатышоваСветланаРафиковна.xml
+	START SYNC PERSON
+PERSON INFO
+	   FNAME: Латышова
+	   SNAME: Светлана
+	   LNAME: Рафиковна
+	 FL_NAME: Латышова Светлана Рафиковна
+	   T_NUM: Э000000234
+	     SID: 
+	   G_SID: 269
+	     INN: 
+	   SNILS: 016-028-614 15
+	   B_DAY: 27-12-1988
+	     DOG: ТрудовойДоговор
+	     ZAN: ОсновноеМестоРаботы
+	R_ID_POS: 
+	   K_POS: 000000001
+	     POS: Базовая
+		ID IS
+		358
+		ID IS
+		358
+	Variants by FIO: 1
+	Variants by TAB NUM: 1
+		Updating EXIST person.
+		KOD IS
+		000000001
+		PERSON VZ
+		ОсновноеМестоРаботы
+		COMPARABLE VZ
+		ОсновноеМестоРаботы
+		SYNC MAIN WORKPLACE.
+Profile id from updatePersonProfile
+2366
+			DB PERSON
+PERSON INFO
+	   FNAME: Латышова
+	   SNAME: Светлана
+	   LNAME: Рафиковна
+	 FL_NAME: Латышова Светлана Рафиковна
+	   T_NUM: Э000000234
+	     SID: 2713
+	   G_SID: 0
+	     INN: temp
+	   SNILS: temp
+	   B_DAY: 29-12-1988
+	     DOG: 
+	     ZAN: 
+	R_ID_POS: 358
+	   K_POS: Э000000001
+	     POS: Базовая
+	END SYNC CURRENT PERSON.
+USER FILE NAME
+//srv-app/anviz_sync/users/МакароваЮлияАнатольевна.xml
+	START SYNC PERSON
+PERSON INFO
+	   FNAME: Макарова
+	   SNAME: Юлия
+	   LNAME: Анатольевна
+	 FL_NAME: Макарова Юлия Анатольевна
+	   T_NUM: ТД00000663
+	     SID: 
+	   G_SID: 268
+	     INN: 
+	   SNILS: 097-934-237 23
+	   B_DAY: 09-02-1987
+	     DOG: ТрудовойДоговор
+	     ZAN: ОсновноеМестоРаботы
+	R_ID_POS: 
+	   K_POS: 00270
+	     POS: Менеджер по закупкам
+		ID IS
+		432
+		ID IS
+		432
+	Variants by FIO: 1
+	Variants by TAB NUM: 1
+		Updating EXIST person.
+		KOD IS
+		00270
+		PERSON VZ
+		ОсновноеМестоРаботы
+		COMPARABLE VZ
+		ОсновноеМестоРаботы
+		SYNC MAIN WORKPLACE.
+Profile id from updatePersonProfile
+2314
+			DB PERSON
+PERSON INFO
+	   FNAME: Макарова
+	   SNAME: Юлия
+	   LNAME: Анатольевна
+	 FL_NAME: Макарова Юлия Анатольевна
+	   T_NUM: ТД00000663
+	     SID: 2731
+	   G_SID: 0
+	     INN: 097-934-237 23
+	   SNILS: 097-934-237 23
+	   B_DAY: 11-02-1987
+	     DOG: 
+	     ZAN: 
+	R_ID_POS: 432
+	   K_POS: ТД00270
+	     POS: Менеджер по закупкам
+S
+	END SYNC CURRENT PERSON.
+USER FILE NAME
+//srv-app/anviz_sync/users/МельяновскийАлексейЭдуардович.xml
+	START SYNC PERSON
+PERSON INFO
+	   FNAME: Мельяновский
+	   SNAME: Алексей
+	   LNAME: Эдуардович
+	 FL_NAME: Мельяновский Алексей Эдуардович
+	   T_NUM: ТД00000662
+	     SID: 
+	   G_SID: 268
+	     INN: 
+	   SNILS: 043-783-288 76
+	   B_DAY: 30-05-1974
+	     DOG: ТрудовойДоговор
+	     ZAN: ОсновноеМестоРаботы
+	R_ID_POS: 
+	   K_POS: 00016
+	     POS: Грузчик
+		ID IS
+		430
+		ID IS
+		430
+	Variants by FIO: 1
+	Variants by TAB NUM: 1
+		Updating EXIST person.
+		KOD IS
+		00016
+		PERSON VZ
+		ОсновноеМестоРаботы
+		COMPARABLE VZ
+		ОсновноеМестоРаботы
+		SYNC MAIN WORKPLACE.
+Profile id from updatePersonProfile
+2317
+			DB PERSON
+PERSON INFO
+	   FNAME: Мельяновский
+	   SNAME: Алексей
+	   LNAME: Эдуардович
+	 FL_NAME: Мельяновский Алексей Эдуардович
+	   T_NUM: ТД00000662
+	     SID: 2732
+	   G_SID: 0
+	     INN: 043-783-288 76
+	   SNILS: 043-783-288 76
+	   B_DAY: 01-06-1974
+	     DOG: 
+	     ZAN: 
+	R_ID_POS: 430
+	   K_POS: ТД00016
+	     POS: Грузчик
+S
+	END SYNC CURRENT PERSON.
+USER FILE NAME
+//srv-app/anviz_sync/users/МинаковДмитрийМихайлович.xml
+	START SYNC PERSON
+PERSON INFO
+	   FNAME: Минаков
+	   SNAME: Дмитрий
+	   LNAME: Михайлович
+	 FL_NAME: Минаков Дмитрий Михайлович
+	   T_NUM: Э000000248
+	     SID: 
+	   G_SID: 269
+	     INN: 
+	   SNILS: 043-783-288 76
+	   B_DAY: 23-05-1983
+	     DOG: ТрудовойДоговор
+	     ZAN: ОсновноеМестоРаботы
+	R_ID_POS: 
+	   K_POS: 000000001
+	     POS: Базовая
+		ID IS
+		358
+		ID IS
+		358
+	Variants by FIO: 1
+	Variants by TAB NUM: 1
+		Updating EXIST person.
+		KOD IS
+		000000001
+		PERSON VZ
+		ОсновноеМестоРаботы
+		COMPARABLE VZ
+		ОсновноеМестоРаботы
+		SYNC MAIN WORKPLACE.
+Profile id from updatePersonProfile
+2487
+			DB PERSON
+PERSON INFO
+	   FNAME: Минаков
+	   SNAME: Дмитрий
+	   LNAME: Михайлович
+	 FL_NAME: Минаков Дмитрий Михайлович
+	   T_NUM: Э000000248
+	     SID: 1401
+	   G_SID: 0
+	     INN: temp
+	   SNILS: temp
+	   B_DAY: 25-05-1983
+	     DOG: 
+	     ZAN: 
+	R_ID_POS: 358
+	   K_POS: Э000000001
+	     POS: Базовая
+	END SYNC CURRENT PERSON.
+USER FILE NAME
+//srv-app/anviz_sync/users/МихайловАлександрГеннадьевич.xml
+	START SYNC PERSON
+PERSON INFO
+	   FNAME: Михайлов
+	   SNAME: Александр
+	   LNAME: Геннадьевич
+	 FL_NAME: Михайлов Александр Геннадьевич
+	   T_NUM: ТД00000660
+	     SID: 
+	   G_SID: 268
+	     INN: 
+	   SNILS: 110-258-046 00
+	   B_DAY: 26-06-1983
+	     DOG: ТрудовойДоговор
+	     ZAN: ОсновноеМестоРаботы
+	R_ID_POS: 
+	   K_POS: 00016
+	     POS: Грузчик
+		ID IS
+		430
+		ID IS
+		430
+	Variants by FIO: 1
+	Variants by TAB NUM: 1
+		Updating EXIST person.
+		KOD IS
+		00016
+		PERSON VZ
+		ОсновноеМестоРаботы
+		COMPARABLE VZ
+		ОсновноеМестоРаботы
+		SYNC MAIN WORKPLACE.
+Profile id from updatePersonProfile
+2318
+			DB PERSON
+PERSON INFO
+	   FNAME: Михайлов
+	   SNAME: Александр
+	   LNAME: Геннадьевич
+	 FL_NAME: Михайлов Александр Геннадьевич
+	   T_NUM: ТД00000660
+	     SID: 2733
+	   G_SID: 0
+	     INN: 110-258-046 00
+	   SNILS: 110-258-046 00
+	   B_DAY: 28-06-1983
+	     DOG: 
+	     ZAN: 
+	R_ID_POS: 430
+	   K_POS: ТД00016
+	     POS: Грузчик
+S
+	END SYNC CURRENT PERSON.
+USER FILE NAME
+//srv-app/anviz_sync/users/НикитянинаЕленаМихайловна.xml
+	START SYNC PERSON
+PERSON INFO
+	   FNAME: Никитянина
+	   SNAME: Елена
+	   LNAME: Михайловна
+	 FL_NAME: Никитянина Елена Михайловна
+	   T_NUM: ТД00000657
+	     SID: 
+	   G_SID: 268
+	     INN: 
+	   SNILS: 068-308-155 71
+	   B_DAY: 10-01-1973
+	     DOG: ТрудовойДоговор
+	     ZAN: ОсновноеМестоРаботы
+	R_ID_POS: 
+	   K_POS: 00271
+	     POS: Посудомойщик
+		ID IS
+		469
+		ID IS
+		469
+	Variants by FIO: 1
+	Variants by TAB NUM: 1
+		Updating EXIST person.
+		KOD IS
+		00271
+		PERSON VZ
+		ОсновноеМестоРаботы
+		COMPARABLE VZ
+		ОсновноеМестоРаботы
+		SYNC MAIN WORKPLACE.
+Profile id from updatePersonProfile
+2325
+			DB PERSON
+PERSON INFO
+	   FNAME: Никитянина
+	   SNAME: Елена
+	   LNAME: Михайловна
+	 FL_NAME: Никитянина Елена Михайловна
+	   T_NUM: ТД00000657
+	     SID: 2734
+	   G_SID: 0
+	     INN: 068-308-155 71
+	   SNILS: 068-308-155 71
+	   B_DAY: 12-01-1973
+	     DOG: 
+	     ZAN: 
+	R_ID_POS: 469
+	   K_POS: ТД00271
+	     POS: Посудомойщик
+S
+	END SYNC CURRENT PERSON.
+USER FILE NAME
+//srv-app/anviz_sync/users/СелезневаВалентинаИвановна.xml
+	START SYNC PERSON
+PERSON INFO
+	   FNAME: Селезнева
+	   SNAME: Валентина
+	   LNAME: Ивановна
+	 FL_NAME: Селезнева Валентина Ивановна
+	   T_NUM: Э000000249
+	     SID: 
+	   G_SID: 269
+	     INN: 
+	   SNILS: 068-308-155 71
+	   B_DAY: 29-12-1977
+	     DOG: ТрудовойДоговор
+	     ZAN: ОсновноеМестоРаботы
+	R_ID_POS: 
+	   K_POS: 000000001
+	     POS: Базовая
+	Variants by FIO: 0
+	Variants by TAB NUM: 0
+	Adding new person.
+SELECT MAX(UID) + 1 AS ID FROM USERS
+1---1
+2757
+Result is
+2757
+		KOD IS
+		000000001
+	END SYNC CURRENT PERSON.
+USER FILE NAME
+//srv-app/anviz_sync/users/ТерентьеваНинаПетровна.xml
+	START SYNC PERSON
+PERSON INFO
+	   FNAME: Терентьева
+	   SNAME: Нина
+	   LNAME: Петровна
+	 FL_NAME: Терентьева Нина Петровна
+	   T_NUM: Э000000230
+	     SID: 
+	   G_SID: 269
+	     INN: 
+	   SNILS: 068-308-155 71
+	   B_DAY: 11-08-1970
+	     DOG: ТрудовойДоговор
+	     ZAN: ОсновноеМестоРаботы
+	R_ID_POS: 
+	   K_POS: 000000001
+	     POS: Базовая
+		ID IS
+		358
+		ID IS
+		358
+	Variants by FIO: 1
+	Variants by TAB NUM: 1
+		Updating EXIST person.
+		KOD IS
+		000000001
+		PERSON VZ
+		ОсновноеМестоРаботы
+		COMPARABLE VZ
+		ОсновноеМестоРаботы
+		SYNC MAIN WORKPLACE.
+Profile id from updatePersonProfile
+2428
+			DB PERSON
+PERSON INFO
+	   FNAME: Терентьева
+	   SNAME: Нина
+	   LNAME: Петровна
+	 FL_NAME: Терентьева Нина Петровна
+	   T_NUM: Э000000230
+	     SID: 2704
+	   G_SID: 0
+	     INN: temp
+	   SNILS: temp
+	   B_DAY: 13-08-1970
+	     DOG: 
+	     ZAN: 
+	R_ID_POS: 358
+	   K_POS: Э000000001
+	     POS: Базовая
+	END SYNC CURRENT PERSON.
+USER FILE NAME
+//srv-app/anviz_sync/users/ТиминАлексейЮрьевич.xml
+	START SYNC PERSON
+PERSON INFO
+	   FNAME: Тимин
+	   SNAME: Алексей
+	   LNAME: Юрьевич
+	 FL_NAME: Тимин Алексей Юрьевич
+	   T_NUM: Э000000244
+	     SID: 
+	   G_SID: 269
+	     INN: 
+	   SNILS: 068-308-155 71
+	   B_DAY: 30-10-1978
+	     DOG: ТрудовойДоговор
+	     ZAN: ОсновноеМестоРаботы
+	R_ID_POS: 
+	   K_POS: 000000001
+	     POS: Базовая
+		ID IS
+		358
+		ID IS
+		358
+	Variants by FIO: 1
+	Variants by TAB NUM: 1
+		Updating EXIST person.
+		KOD IS
+		000000001
+		PERSON VZ
+		ОсновноеМестоРаботы
+		COMPARABLE VZ
+		ОсновноеМестоРаботы
+		SYNC MAIN WORKPLACE.
+Profile id from updatePersonProfile
+2431
+			DB PERSON
+PERSON INFO
+	   FNAME: Тимин
+	   SNAME: Алексей
+	   LNAME: Юрьевич
+	 FL_NAME: Тимин Алексей Юрьевич
+	   T_NUM: Э000000244
+	     SID: 2740
+	   G_SID: 0
+	     INN: temp
+	   SNILS: temp
+	   B_DAY: 01-11-1978
+	     DOG: 
+	     ZAN: 
+	R_ID_POS: 358
+	   K_POS: Э000000001
+	     POS: Базовая
+	END SYNC CURRENT PERSON.
+USER FILE NAME
+//srv-app/anviz_sync/users/ТиминаТатьянаАнатольевна.xml
+	START SYNC PERSON
+PERSON INFO
+	   FNAME: Тимина
+	   SNAME: Татьяна
+	   LNAME: Анатольевна
+	 FL_NAME: Тимина Татьяна Анатольевна
+	   T_NUM: Э000000243
+	     SID: 
+	   G_SID: 269
+	     INN: 
+	   SNILS: 068-308-155 71
+	   B_DAY: 08-02-1981
+	     DOG: ТрудовойДоговор
+	     ZAN: ОсновноеМестоРаботы
+	R_ID_POS: 
+	   K_POS: 000000001
+	     POS: Базовая
+		ID IS
+		358
+		ID IS
+		358
+	Variants by FIO: 1
+	Variants by TAB NUM: 1
+		Updating EXIST person.
+		KOD IS
+		000000001
+		PERSON VZ
+		ОсновноеМестоРаботы
+		COMPARABLE VZ
+		ОсновноеМестоРаботы
+		SYNC MAIN WORKPLACE.
+Profile id from updatePersonProfile
+2432
+			DB PERSON
+PERSON INFO
+	   FNAME: Тимина
+	   SNAME: Татьяна
+	   LNAME: Анатольевна
+	 FL_NAME: Тимина Татьяна Анатольевна
+	   T_NUM: Э000000243
+	     SID: 2741
+	   G_SID: 0
+	     INN: temp
+	   SNILS: temp
+	   B_DAY: 10-02-1981
+	     DOG: 
+	     ZAN: 
+	R_ID_POS: 358
+	   K_POS: Э000000001
+	     POS: Базовая
+	END SYNC CURRENT PERSON.
+USER FILE NAME
+//srv-app/anviz_sync/users/ТруновАлександрАлександрович.xml
+	START SYNC PERSON
+PERSON INFO
+	   FNAME: Трунов
+	   SNAME: Александр
+	   LNAME: Александрович
+	 FL_NAME: Трунов Александр Александрович
+	   T_NUM: Э000000225
+	     SID: 
+	   G_SID: 269
+	     INN: 
+	   SNILS: 068-308-155 71
+	   B_DAY: 02-03-1984
+	     DOG: ТрудовойДоговор
+	     ZAN: ОсновноеМестоРаботы
+	R_ID_POS: 
+	   K_POS: 000000001
+	     POS: Базовая
+		ID IS
+		358
+		ID IS
+		358
+	Variants by FIO: 1
+	Variants by TAB NUM: 1
+		Updating EXIST person.
+		KOD IS
+		000000001
+		PERSON VZ
+		ОсновноеМестоРаботы
+		COMPARABLE VZ
+		ОсновноеМестоРаботы
+		SYNC MAIN WORKPLACE.
+Profile id from updatePersonProfile
+2438
+			DB PERSON
+PERSON INFO
+	   FNAME: Трунов
+	   SNAME: Александр
+	   LNAME: Александрович
+	 FL_NAME: Трунов Александр Александрович
+	   T_NUM: Э000000225
+	     SID: 2700
+	   G_SID: 0
+	     INN: temp
+	   SNILS: temp
+	   B_DAY: 04-03-1984
+	     DOG: 
+	     ZAN: 
+	R_ID_POS: 358
+	   K_POS: Э000000001
+	     POS: Базовая
+	END SYNC CURRENT PERSON.
+USER FILE NAME
+//srv-app/anviz_sync/users/УсикТатьянаВладимировна.xml
+	START SYNC PERSON
+PERSON INFO
+	   FNAME: Усик
+	   SNAME: Татьяна
+	   LNAME: Владимировна
+	 FL_NAME: Усик Татьяна Владимировна
+	   T_NUM: Э000000229
+	     SID: 
+	   G_SID: 269
+	     INN: 
+	   SNILS: 068-308-155 71
+	   B_DAY: 09-05-1971
+	     DOG: ТрудовойДоговор
+	     ZAN: ОсновноеМестоРаботы
+	R_ID_POS: 
+	   K_POS: 000000001
+	     POS: Базовая
+		ID IS
+		358
+		ID IS
+		358
+	Variants by FIO: 1
+	Variants by TAB NUM: 1
+		Updating EXIST person.
+		KOD IS
+		000000001
+		PERSON VZ
+		ОсновноеМестоРаботы
+		COMPARABLE VZ
+		ОсновноеМестоРаботы
+		SYNC MAIN WORKPLACE.
+Profile id from updatePersonProfile
+2441
+			DB PERSON
+PERSON INFO
+	   FNAME: Усик
+	   SNAME: Татьяна
+	   LNAME: Владимировна
+	 FL_NAME: Усик Татьяна Владимировна
+	   T_NUM: Э000000229
+	     SID: 2705
+	   G_SID: 0
+	     INN: temp
+	   SNILS: temp
+	   B_DAY: 11-05-1971
+	     DOG: 
+	     ZAN: 
+	R_ID_POS: 358
+	   K_POS: Э000000001
+	     POS: Базовая
+	END SYNC CURRENT PERSON.
+USER FILE NAME
+//srv-app/anviz_sync/users/ФокинаОксанаВасильевна.xml
+	START SYNC PERSON
+PERSON INFO
+	   FNAME: Фокина
+	   SNAME: Оксана
+	   LNAME: Васильевна
+	 FL_NAME: Фокина Оксана Васильевна
+	   T_NUM: Э000000242
+	     SID: 
+	   G_SID: 269
+	     INN: 
+	   SNILS: 068-308-155 71
+	   B_DAY: 11-04-1977
+	     DOG: ТрудовойДоговор
+	     ZAN: ОсновноеМестоРаботы
+	R_ID_POS: 
+	   K_POS: 000000001
+	     POS: Базовая
+		ID IS
+		358
+		ID IS
+		358
+	Variants by FIO: 1
+	Variants by TAB NUM: 1
+		Updating EXIST person.
+		KOD IS
+		000000001
+		PERSON VZ
+		ОсновноеМестоРаботы
+		COMPARABLE VZ
+		ОсновноеМестоРаботы
+		SYNC MAIN WORKPLACE.
+Profile id from updatePersonProfile
+2448
+			DB PERSON
+PERSON INFO
+	   FNAME: Фокина
+	   SNAME: Оксана
+	   LNAME: Васильевна
+	 FL_NAME: Фокина Оксана Васильевна
+	   T_NUM: Э000000242
+	     SID: 2742
+	   G_SID: 0
+	     INN: temp
+	   SNILS: temp
+	   B_DAY: 13-04-1977
+	     DOG: 
+	     ZAN: 
+	R_ID_POS: 358
+	   K_POS: Э000000001
+	     POS: Базовая
+	END SYNC CURRENT PERSON.
+USER FILE NAME
+//srv-app/anviz_sync/users/ХимякСергейСергеевич.xml
+	START SYNC PERSON
+PERSON INFO
+	   FNAME: Химяк
+	   SNAME: Сергей
+	   LNAME: Сергеевич
+	 FL_NAME: Химяк Сергей Сергеевич
+	   T_NUM: Э000000241
+	     SID: 
+	   G_SID: 269
+	     INN: 
+	   SNILS: 068-308-155 71
+	   B_DAY: 16-03-1990
+	     DOG: ТрудовойДоговор
+	     ZAN: ОсновноеМестоРаботы
+	R_ID_POS: 
+	   K_POS: 000000001
+	     POS: Базовая
+		ID IS
+		358
+		ID IS
+		358
+	Variants by FIO: 1
+	Variants by TAB NUM: 1
+		Updating EXIST person.
+		KOD IS
+		000000001
+		PERSON VZ
+		ОсновноеМестоРаботы
+		COMPARABLE VZ
+		ОсновноеМестоРаботы
+		SYNC MAIN WORKPLACE.
+Profile id from updatePersonProfile
+2449
+			DB PERSON
+PERSON INFO
+	   FNAME: Химяк
+	   SNAME: Сергей
+	   LNAME: Сергеевич
+	 FL_NAME: Химяк Сергей Сергеевич
+	   T_NUM: Э000000241
+	     SID: 2743
+	   G_SID: 0
+	     INN: temp
+	   SNILS: temp
+	   B_DAY: 18-03-1990
+	     DOG: 
+	     ZAN: 
+	R_ID_POS: 358
+	   K_POS: Э000000001
+	     POS: Базовая
+	END SYNC CURRENT PERSON.
+USER FILE NAME
+//srv-app/anviz_sync/users/ЧерноиноваИринаНиколаевна.xml
+	START SYNC PERSON
+PERSON INFO
+	   FNAME: Черноинова
+	   SNAME: Ирина
+	   LNAME: Николаевна
+	 FL_NAME: Черноинова Ирина Николаевна
+	   T_NUM: Э000000236
+	     SID: 
+	   G_SID: 269
+	     INN: 
+	   SNILS: 068-308-155 71
+	   B_DAY: 24-01-1998
+	     DOG: ТрудовойДоговор
+	     ZAN: ОсновноеМестоРаботы
+	R_ID_POS: 
+	   K_POS: 000000001
+	     POS: Базовая
+		ID IS
+		358
+		ID IS
+		358
+	Variants by FIO: 1
+	Variants by TAB NUM: 1
+		Updating EXIST person.
+		KOD IS
+		000000001
+		PERSON VZ
+		ОсновноеМестоРаботы
+		COMPARABLE VZ
+		ОсновноеМестоРаботы
+		SYNC MAIN WORKPLACE.
+Profile id from updatePersonProfile
+2453
+			DB PERSON
+PERSON INFO
+	   FNAME: Черноинова
+	   SNAME: Ирина
+	   LNAME: Николаевна
+	 FL_NAME: Черноинова Ирина Николаевна
+	   T_NUM: Э000000236
+	     SID: 2744
+	   G_SID: 0
+	     INN: temp
+	   SNILS: temp
+	   B_DAY: 26-01-1998
+	     DOG: 
+	     ZAN: 
+	R_ID_POS: 358
+	   K_POS: Э000000001
+	     POS: Базовая
+	END SYNC CURRENT PERSON.
+USER FILE NAME
+//srv-app/anviz_sync/users/ШестериковАлександрСергеевич.xml
+	START SYNC PERSON
+PERSON INFO
+	   FNAME: Шестериков
+	   SNAME: Александр
+	   LNAME: Сергеевич
+	 FL_NAME: Шестериков Александр Сергеевич
+	   T_NUM: Э000000240
+	     SID: 
+	   G_SID: 269
+	     INN: 
+	   SNILS: 068-308-155 71
+	   B_DAY: 20-01-1991
+	     DOG: ТрудовойДоговор
+	     ZAN: ОсновноеМестоРаботы
+	R_ID_POS: 
+	   K_POS: 000000001
+	     POS: Базовая
+		ID IS
+		358
+		ID IS
+		358
+	Variants by FIO: 1
+	Variants by TAB NUM: 1
+		Updating EXIST person.
+		KOD IS
+		000000001
+		PERSON VZ
+		ОсновноеМестоРаботы
+		COMPARABLE VZ
+		ОсновноеМестоРаботы
+		SYNC MAIN WORKPLACE.
+Profile id from updatePersonProfile
+2456
+			DB PERSON
+PERSON INFO
+	   FNAME: Шестериков
+	   SNAME: Александр
+	   LNAME: Сергеевич
+	 FL_NAME: Шестериков Александр Сергеевич
+	   T_NUM: Э000000240
+	     SID: 2745
+	   G_SID: 0
+	     INN: temp
+	   SNILS: temp
+	   B_DAY: 22-01-1991
+	     DOG: 
+	     ZAN: 
+	R_ID_POS: 358
+	   K_POS: Э000000001
+	     POS: Базовая
+	END SYNC CURRENT PERSON.
+USER FILE NAME
+//srv-app/anviz_sync/users/ШимчикЕленаМихайловна.xml
+	START SYNC PERSON
+PERSON INFO
+	   FNAME: Шимчик
+	   SNAME: Елена
+	   LNAME: Михайловна
+	 FL_NAME: Шимчик Елена Михайловна
+	   T_NUM: ТД00000665
+	     SID: 
+	   G_SID: 268
+	     INN: 
+	   SNILS:    -   -      
+	   B_DAY: 26-05-1992
+	     DOG: ТрудовойДоговор
+	     ZAN: ОсновноеМестоРаботы
+	R_ID_POS: 
+	   K_POS: 00271
+	     POS: Посудомойщик
+		ID IS
+		469
+		ID IS
+		469
+	Variants by FIO: 1
+	Variants by TAB NUM: 1
+		Updating EXIST person.
+		KOD IS
+		00271
+		PERSON VZ
+		ОсновноеМестоРаботы
+		COMPARABLE VZ
+		ОсновноеМестоРаботы
+		SYNC MAIN WORKPLACE.
+Profile id from updatePersonProfile
+2348
+			DB PERSON
+PERSON INFO
+	   FNAME: Шимчик
+	   SNAME: Елена
+	   LNAME: Михайловна
+	 FL_NAME: Шимчик Елена Михайловна
+	   T_NUM: ТД00000665
+	     SID: 2735
+	   G_SID: 0
+	     INN: -   -
+	   SNILS: -   -
+	   B_DAY: 28-05-1992
+	     DOG: 
+	     ZAN: 
+	R_ID_POS: 469
+	   K_POS: ТД00271
+	     POS: Посудомойщик
+	END SYNC CURRENT PERSON.
+USER FILE NAME
+//srv-app/anviz_sync/users/ШишкинаАнастасияИвановна.xml
+	START SYNC PERSON
+PERSON INFO
+	   FNAME: Шишкина
+	   SNAME: Анастасия
+	   LNAME: Ивановна
+	 FL_NAME: Шишкина Анастасия Ивановна
+	   T_NUM: ТД00000669
+	     SID: 
+	   G_SID: 268
+	     INN: 
+	   SNILS:    -   -      
+	   B_DAY: 18-05-1988
+	     DOG: ТрудовойДоговор
+	     ZAN: ОсновноеМестоРаботы
+	R_ID_POS: 
+	   K_POS: 00006
+	     POS: Бухгалтер-калькулятор
+	Variants by FIO: 0
+	Variants by TAB NUM: 0
+	Adding new person.
+SELECT MAX(UID) + 1 AS ID FROM USERS
+1---1
+2758
+Result is
+2758
+		KOD IS
+		00006
+PROFILE ID IS
+ТД00000669
+SELECT MAX(DPID) + 1 AS ID FROM PROFILES_ACCESS
+1---1
+2794
+Result is
+2794
+Next profile ID is
+2794
+BEFORE EXEC
+Шишкина_Анастасия_Ивановна_ТД00000669
+Profile is created
+2794
+Creating dors for profile with id
+2794
+SELECT MAX(PDETID) + 1 AS ID FROM PROFILES_ACCESS_DET
+1---1
+44688
+Result is
+44688
+Next door ID for profile 
+44688
+SELECT MAX(PDETID) + 1 AS ID FROM PROFILES_ACCESS_DET
+1---1
+44689
+Result is
+44689
+Next door ID for profile 
+44689
+SELECT MAX(PDETID) + 1 AS ID FROM PROFILES_ACCESS_DET
+1---1
+44690
+Result is
+44690
+Next door ID for profile 
+44690
+SELECT MAX(PDETID) + 1 AS ID FROM PROFILES_ACCESS_DET
+1---1
+44691
+Result is
+44691
+Next door ID for profile 
+44691
+SELECT MAX(PDETID) + 1 AS ID FROM PROFILES_ACCESS_DET
+1---1
+44692
+Result is
+44692
+Next door ID for profile 
+44692
+SELECT MAX(PDETID) + 1 AS ID FROM PROFILES_ACCESS_DET
+1---1
+44693
+Result is
+44693
+Next door ID for profile 
+44693
+SELECT MAX(PDETID) + 1 AS ID FROM PROFILES_ACCESS_DET
+1---1
+44694
+Result is
+44694
+Next door ID for profile 
+44694
+SELECT MAX(PDETID) + 1 AS ID FROM PROFILES_ACCESS_DET
+1---1
+44695
+Result is
+44695
+Next door ID for profile 
+44695
+SELECT MAX(PDETID) + 1 AS ID FROM PROFILES_ACCESS_DET
+1---1
+44696
+Result is
+44696
+Next door ID for profile 
+44696
+SELECT MAX(PDETID) + 1 AS ID FROM PROFILES_ACCESS_DET
+1---1
+44697
+Result is
+44697
+Next door ID for profile 
+44697
+SELECT MAX(PDETID) + 1 AS ID FROM PROFILES_ACCESS_DET
+1---1
+44698
+Result is
+44698
+Next door ID for profile 
+44698
+SELECT MAX(PDETID) + 1 AS ID FROM PROFILES_ACCESS_DET
+1---1
+44699
+Result is
+44699
+Next door ID for profile 
+44699
+SELECT MAX(PDETID) + 1 AS ID FROM PROFILES_ACCESS_DET
+1---1
+44700
+Result is
+44700
+Next door ID for profile 
+44700
+SELECT MAX(PDETID) + 1 AS ID FROM PROFILES_ACCESS_DET
+1---1
+44701
+Result is
+44701
+Next door ID for profile 
+44701
+SELECT MAX(PDETID) + 1 AS ID FROM PROFILES_ACCESS_DET
+1---1
+44702
+Result is
+44702
+Next door ID for profile 
+44702
+SELECT MAX(PDETID) + 1 AS ID FROM PROFILES_ACCESS_DET
+1---1
+44703
+Result is
+44703
+Next door ID for profile 
+44703
+Doors are created
+	END SYNC CURRENT PERSON.
